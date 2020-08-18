@@ -1,0 +1,62 @@
+#making project in list in python
+ch=0
+list=[]
+while True:
+    print("list manipulation menu!!!")
+    print("1.Add element")
+    print("2.Modify element ")
+    print("3. Delete element ")
+    print("4.sort element ")
+    print("5.Display element ")
+    print("6.Exit")
+    ch=int(input("enter your choice!!!"))
+    if ch==1:
+        print("1.Add element :")
+        print("2.Add a list :")
+        ch1=int(input("enter your choice(1,2)"))
+        if ch1==1:
+            item=int(input("enter element "))
+            pos=int(input("enter the position "))
+            list.insert(pos,item)
+        elif ch1==2:
+            lst2=eval(input("enter the list :"))
+            list.extend(lst2)
+        else:
+            print("valid choices are 1,2 ...returning ")
+        print("successfully added !!")
+    elif ch==2:
+        pos=int(input("enter the position to modify the element "))
+        item=int(input("enter the new element "))
+        old=list[pos]
+        list[pos]=item
+        print(old,"modify with the value ",item)
+    elif ch==3:
+        print("1.delete element by position :")
+        print("2.delete the element by value :")
+        ch1=int(input("enter your choice(1,2)"))
+        if ch1==1:
+            pos=int(input("enter your position to delete the element :"))
+            item=list.pop(pos)
+        elif ch1==2:
+            item=int(input("enter your element to delete "))
+            pos=list.remove(item)
+            print("successfully deleted :")
+        else:
+            print("enter your choice correctly :(")
+    elif ch==4:
+        print("1.Ascending ")
+        print("2.Descending")
+        ch1=int(input("enter your choice(1,2)"))
+        if ch1==1:
+            list.sort()
+        elif ch1==2:
+            list.sort(reverse=True)
+        else:
+            print("enter your choice correctly :(")
+    elif ch==5:
+        print(list)
+    elif ch==6:
+        break
+    else:
+        print("valid choice are given(1,6), i never accept this mistake :))")
+
