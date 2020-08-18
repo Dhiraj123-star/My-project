@@ -1,0 +1,24 @@
+#finding the area of the shape using random
+import random
+import math
+ran=random.randint(0,3)
+if (ran==1):
+    print("you selected for finding the area of rectangle :)")
+    length=int(input("enter the length of rectangle:"))
+    breadth=int(input("enter the breadth of rectangle:"))
+    area =l*b
+    print("the area of the selected shape :",area)
+elif(ran==2):
+    print("you selected for finding the area of the circle :)")
+    radius=int(input("enter the radius of the circle:"))
+    area=math.pi*radius**2
+    print("the area of the selected shape :",area)
+elif (ran==3):
+    print("you selected for finding the area of square :)")
+    side=int(input("enter the side of the square:"))
+    area=side**2
+    print("the area of the selected shape :",area)
+else:
+    print("nothing in your hand !, try again it may be")
+print("thanks for using python :)")
+
