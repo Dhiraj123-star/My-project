@@ -1,0 +1,33 @@
+ans=input("do you want to play the game (yes/no)")
+score=0
+total_q=4
+if ans.lower()=='yes':
+    ans=input("1. what is the best programming language:")
+    if ans.lower()=='python':
+        score+=1
+        print("correct")
+    else:
+        print("incorrect")
+    ans=input("2.what is the value of 2 *3-1:")
+    if ans=='5':
+         score+=1
+         print("correct")
+    else:
+        print("incorrect")
+    ans=input("3. who won the icc world cup 2019:")
+    if ans.lower()=='england':
+        score+=1
+        print("correct")
+    else:
+        print("incorrect")
+
+    ans=input("4.who is the prime minister of india:")
+    if ans.lower()=='narendra modi' or ans.lower()== 'modi':
+        score+=1
+        print("correct")
+    else:
+        print("incorrect")
+
+print("thanks for playing the game",score,"questions correct")
+mark=(score/total_q)*100
+print("you got marks:",mark)
