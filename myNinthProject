@@ -1,0 +1,17 @@
+#password cracking program in python
+str=input("enter  your new password ")
+str1=input("reenter your password ")
+if str==str1:
+    print("welcome!!")
+else:
+    print("please reenter ,sorry !!!")
+print("Do your work !!!And logout ")
+in1=input("do you want to logout???")
+if 'y':
+    print("ok!!!")
+pass1=input("enter your password !!")
+if pass1==str:
+    print("you are  entered valid !!!")
+    print("welcome to your website !!!")
+else:
+    print("please enter valid one !!!")
