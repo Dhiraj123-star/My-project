@@ -1,0 +1,9 @@
+#program for selected people from given list
+import random
+list1=[]
+limit=int(input("enter your limit :"))
+for i in range(limit):
+    name=input("enter your name:")
+    list1.append(name)
+for i in list1:
+    print(list1[i],end=' ')
