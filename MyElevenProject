@@ -1,0 +1,14 @@
+#generate the OTP password
+import  math,random
+#function to generate password
+def generateOTP():
+    #declare a digits variables
+    #which stores all digits
+    digits="0123456789"
+    OTP=" "
+    for i in range(4):
+        OTP+=digits[math.floor(random.random()*10)]
+    return OTP
+#driver's code
+if __name__=="__main__":
+    print("OTP of digits :",generateOTP())
