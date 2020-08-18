@@ -1,0 +1,17 @@
+import random
+print("number guessing game:")
+number=random.randint(1,9)
+chances=0
+while chances<5:
+    guess=int(input())
+    if guess==number:
+        print("congratulations ,You win :)")
+        break
+    elif guess<number:
+        print("your guess is too low :Guess a number higher than :",guess)
+    else:
+        print("your guess is  too high : guess a number lower than:",guess)
+    chances+=1
+
+if not chances<5:
+    print("you lose!!!")
