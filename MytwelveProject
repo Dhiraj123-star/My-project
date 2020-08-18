@@ -1,0 +1,29 @@
+#calculator program using python
+print("the python program for calculator")
+print("1. addition\n2.subtraction\n3.multiplication\n4.division")
+a=int(input("enter your choice"))
+if (a==1):
+    num1=int(input("enter your first number:"))
+    num2=int(input("enter your second number:"))
+    print("the sum is:", num1+num2)
+elif (a==2):
+    num1 = int(input("enter your first number:"))
+    num2 = int(input("enter your second number:"))
+    if(num1<num2):
+        print("subtraction is not possible, give valid input")
+    else:
+        print("the subtraction is:",num1-num2)
+elif(a==3):
+    num1 = int(input("enter your first number:"))
+    num2 = int(input("enter your second number:"))
+    print("the multiplication is:",num1*num2)
+elif (a==4):
+    num1 = int(input("enter your first number:"))
+    num2 = int(input("enter your second number:"))
+    if(num2==0):
+        print("please enter valid number")
+    else:
+        print("the division is :",num1/num2)
+else:
+    print("enter valid input :)")
+print("thanks for using python")
