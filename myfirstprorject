@@ -1,0 +1,41 @@
+""" stack operation"""
+def isempty(stk):
+    if stk==[]:
+        return True
+    else:
+        return False
+def push(stk,item):
+    stk.append(item)
+    top=len(stk)-1
+def display(stk):
+    if isempty(stk):
+        print("stack empty")
+    else:
+        top=len(stk)-1
+        print(stk[top],"top")
+        for a in range(top-1,-1,-1):
+            print(stk[a])
+
+#main
+stack=[]
+top=None
+while True:
+    print("stack operation")
+    print("1.push")
+    print("2.display stack")
+    print("3.exit")
+    ch=int(input("enter your choice(1-3):"))
+    if ch==1:
+        bno=int(input("enter the book no.to be inserted"))
+        bname=input("enter the book name  to be inserted:")
+        item=[bno,bname]  #creating a list from the input items
+        push(stack,item)
+        input()
+    elif ch==2:
+        display(stack)
+        input()
+    elif ch==3:
+        break
+    else:
+        print("invalid choice")
+        input()
