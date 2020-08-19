@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class digitCount {
+    public static void main(String[]a){
+        Scanner n=new Scanner(System.in);
+        System.out.println("enter your number");
+        int num=n.nextInt();
+        int count=0;
+        while(num!=0){
+            //num=num/10
+            num/=10;
+            ++count;
+        }
+        System.out.println("the counts of  digits in input number is: "+ count);
+        //using the for loop
+        System.out.println("using the for loop!");
+        Scanner n1=new Scanner(System.in);
+        System.out.println("enter your number for another way!!!");
+        int num1=n1.nextInt();
+        int count1=0;
+        for(;num1!=0;num1/=10,++count1){
+
+
+        }
+        System.out.println("the no. of digits in given number!!! "+count1);
+    }
+}
