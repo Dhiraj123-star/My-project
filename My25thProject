@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class CyclinderVol2 {
+  public   static void main(String[] a){
+      Scanner s=new Scanner(System.in);
+      System.out.println("enter the radius of the cyclinder!!");
+      double r=s.nextDouble();
+      System.out.println("enter the height of the cyclinder!!");
+      double h=s.nextDouble();
+      double v =CyclinderVol2.volume(r,h);
+      System.out.println("volume of the cyclinder is: "+v);
+  }
+  public static double volume(double r, double h){
+      return ((22*r*r*h)/7);
+  }
+}
