@@ -1,0 +1,15 @@
+//collections in kotlin
+fun main() {
+    val num: MutableList<Int> = mutableListOf(12, 6, 780, 78)
+    val readOnlyView: List<Int> = num
+    println("my mutable list---" + num)
+    num.add(34)
+    println("my mutable list after addition" + num)
+    println(readOnlyView)
+    //readOnlyView.clear()
+}
+//another example of collections
+
+
+
+
