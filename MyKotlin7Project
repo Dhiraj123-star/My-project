@@ -1,0 +1,29 @@
+// program for checking the equality of given input string
+import java.util.Scanner
+fun main(){
+    val str=Scanner(System.`in`)
+    println("enter your first string :")
+    var str1=str.next()
+    println("enter the second string :")
+    var str2=str.next()
+    if(str1==str2){
+        println("both strings are equal!!")
+
+    }
+    else{
+        println("strings are not Equal!!")
+    }
+    println("another method for checking equality of the string!!")
+    val s=Scanner(System.`in`)
+    println("enter the first string!!")
+    var s1=s.next()
+    println("enter the second String!!")
+    var s2=s.next()
+    if(s1.equals(s2)){
+        println("both strings are equal !!")
+
+    }
+    else{
+        println("strings are not equal ")
+    }
+}
