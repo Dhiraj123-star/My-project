@@ -1,0 +1,15 @@
+fun main() {
+    val intmap: HashMap<Int, String> = hashMapOf<Int, String>(1 to "Python", 2 to "kotlin", 3 to "scala")
+    val strmap: HashMap<String, String> = hashMapOf<String, String>("one" to "Scala", "'two" to "C", "three" to "C++")
+strmap.put("four ","Swift")
+    strmap.put("five","Sql")
+    strmap.put("six","html")
+    println("..traversing the intmap...")
+    for (key in intmap.keys){
+        println(intmap[key])
+    }
+    println("..traversing the strmap..")
+    for(key in strmap.keys){
+        println(strmap[key])
+    }
+}
