@@ -1,0 +1,21 @@
+//finding the area by taking input from user
+import java.util.Scanner
+fun main(){
+    val num=Scanner(System.`in`)
+    val l:Int
+    val b:Int
+    val s:Int
+    var r:Float
+    println("enter the length of the rectangle:")
+    l=num.nextInt();
+    println("enter the breadth of the rectangle:")
+    b=num.nextInt();
+    println("the area of the rectangle is:"+ l*b);
+    println("enter the side of the square:")
+    s=num.nextInt()
+    println("the area of the square is:"+ s*s)
+    println("enter the radius of the circle: ")
+    r=num.nextFloat()
+    println("the area of the circle is :"+ 3.14 *r*r)
+    println("thanks for using kotlin")
+}
