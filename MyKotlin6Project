@@ -1,0 +1,23 @@
+//program for checking particular element in the array
+import java.util.Scanner
+fun main(){
+    val num= intArrayOf(12,45,56,67,66)
+    var found=false
+    val n=Scanner(System.`in`)
+    println("enter the search element")
+    val number=n.nextInt()
+    for(n in num){
+        if(n==number){
+            found=true
+            break
+
+        }
+    }
+    if(found){
+        println("$number is found !!")
+    }
+    else{
+        println("$number is not found !!")
+    }
+
+}
