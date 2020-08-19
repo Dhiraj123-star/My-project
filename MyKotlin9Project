@@ -1,0 +1,13 @@
+//collection example 2
+fun main(){
+    val items= listOf<String>("dhiraj","loves","kotlin","programming")
+    val item= listOf<Int>(12,78,45,23)
+    println("first element of my items"+items.first())
+    println("the last element of my items"+ items.last())
+    println("even numbers of our list .."+item.filter { it % 2==0 })
+    val readWriteMap= hashMapOf("foo" to 1,"bar" to 2)
+    println(readWriteMap["foo"])
+    val strings= hashSetOf<String> ("a","b","c","d")
+    println("my set values are"+strings)
+
+}
