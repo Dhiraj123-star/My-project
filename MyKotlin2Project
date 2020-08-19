@@ -1,0 +1,22 @@
+/program for largest of three numbers
+import java.util.Scanner
+fun main(){
+    var a:Int ;
+    var b :Int;
+    var c :Int ;
+    val n=Scanner(System.`in`)
+println("enter your first number")
+    a=n.nextInt()
+    println("enter your second number ")
+    b=n.nextInt()
+    println("enter your third number")
+    c=n.nextInt()
+    if(a>b && a>c)
+        println("$a is greater")
+    else if (b>a && b>c)
+        println("$b is greater ")
+    else
+        println("$c is greater ")
+
+    println("thanks for using kotlin ")
+}
