@@ -1,0 +1,14 @@
+import  java.util.Scanner;
+public class discount {
+    public static void main(String[]a){
+        double dis, amount,markedprice,s;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the marked price :");
+        markedprice=sc.nextDouble();
+        System.out.println("enter the discount !!!");
+        dis=sc.nextDouble();
+        s=100-dis;
+        amount=(s*markedprice)/100;
+        System.out.println("amount after discount "+amount);
+    }
+}
