@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class CGPAper2 {
+    double sum=0;
+    CGPAper2(double[]marks){
+        double[] grade =new double[marks.length];
+        for(int i=0;i<marks.length;i++){
+            grade[i]=(marks[i]/10);
+        }
+        for(int i=0;i<marks.length;i++){
+            sum+=grade[i];
+        }
+    }
+}
+class cgpa{
+    public  static void main(String[]a){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the no. of subjects: ");
+        int n=sc.nextInt();
+        double[] marks=new double[n];
+        System.out.println("enter the marks:");
+        for(int i=0;i<n;i++){
+            marks[i]=sc.nextInt();
+
+        }
+        double cgpa,sum=0;
+        CGPAper2 cg=new CGPAper2(marks);
+        cgpa=cg.sum/n;
+        System.out.println("cgpa= "+cgpa);
+        System.out.println("the cgpa in percentage is: "+cgpa*9.5);
+
+    }
+}
