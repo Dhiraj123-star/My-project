@@ -1,0 +1,12 @@
+import  java.util.Scanner;
+public class commisionPer {
+    public static void main(String []a){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the amount !!!");
+        double amount=sc.nextDouble();
+        System.out.println("enter the commission percentage ");
+        double com=sc.nextDouble();
+        double commission =((com/100)*amount);
+        System.out.println("commission amount =  "+ commission);
+    }
+}
