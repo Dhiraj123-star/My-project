@@ -1,0 +1,26 @@
+//creating calculator in kotlin
+import java.util.*
+fun main(){
+    val n=Scanner(System.`in`)
+    println("enter the first number :")
+    var num1=n.nextDouble()
+    println("enter the second number:")
+    var num2=n.nextDouble()
+    println("enter the operator +,-,*,/ :")
+    var operator =n.next()[0]
+    var result:Double=0.0
+    when(operator){
+        '+' -> result= (num1+num2).toDouble()
+        '-' -> result= (num1-num2).toDouble()
+        '*' -> result=(num1*num2).toDouble()
+        '/' -> result=(num1/num2).toDouble()
+        //operator doesn't match any operator constant(+,-,*,/)
+        else ->
+        {
+            println("Error ! does not match any operator!!")
+        }
+
+
+    }
+    System.out.printf("%.1f %c %.1f =%.1f ",num1,operator,num2,result)
+}
