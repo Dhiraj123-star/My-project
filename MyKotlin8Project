@@ -1,0 +1,10 @@
+//program for checking vowel and consonant
+fun main(){
+    val ch='i'
+    val vowelconsonant= if(ch=='a' ||ch=='e'||ch=='i'||ch=='o'||ch=='u') "vowel " else "consonant"
+    println("$ch is $vowelconsonant")
+    var a=12
+    println("checking the even or odd")
+    val check= if(a%2==0)"even " else "odd"
+    println("$a is $check")
+}
