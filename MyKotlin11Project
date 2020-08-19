@@ -1,0 +1,24 @@
+//extension example in kotlin
+class allien{
+    var skills:String="null"
+    fun printmyskills(){
+        print(skills)
+    }
+
+}
+fun main(){
+    var a1=allien()
+    a1.skills="programming"
+   // a1.printmyskills()
+    var a2=allien()
+    a2.skills="coding"
+   // a2.printmyskills()
+    var a3=allien()
+    a3.skills=a1.addmyskills(a2)
+     a3.printmyskills()
+}
+fun allien.addmyskills(a:allien):String{
+    var a4=allien()
+    a4.skills=this.skills+ " "+a.skills
+    return a4.skills
+}
