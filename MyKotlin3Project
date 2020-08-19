@@ -1,0 +1,14 @@
+//sum of digits in kotlin
+import java.util.Scanner
+fun main(){
+    var number:Int
+    var sum:Int=0
+    val n=Scanner(System.`in`)
+    println("enter your limit  ")
+    number=n.nextInt()
+    for( i in 1..number){
+        sum+=i
+    }
+    println("$sum")
+
+}
