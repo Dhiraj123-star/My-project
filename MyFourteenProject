@@ -1,0 +1,25 @@
+package mynew;
+import java.util.Scanner;
+public class volumecalculation {
+public static void main(String[]a) {
+	Scanner n=new Scanner(System.in);
+	float a1,l,b,h,r;
+	System.out.println("the volume of the different shapes :)");
+	System.out.println("enter the side of the cube");
+	a1=n.nextFloat();
+	System.out.println("enter the length of the cuboid");
+	l=n.nextFloat();
+	System.out.println("enter the breadth of the cuboid");
+	b=n.nextFloat();
+	System.out.println("enter the height of the cuboid");
+	h=n.nextFloat();
+	System.out.println("enter the radius of the sphere");
+	r=n.nextFloat();
+	System.out.println("enter the volume of the cube "+ a1*a1*a1);
+	System.out.println("enter the volume  of the cuboid "+ l*b*h);
+	System.out.println("enter the volume  of the sphere  "+ (4/3*r*r*r));
+	System.out.println("Thanks for doing programming in java :)");
+	
+	
+}
+}
