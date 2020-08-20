@@ -1,0 +1,23 @@
+trait trait1 {
+  def method1()
+
+}
+trait  trait2{
+  def method2()
+}
+class trait3 extends trait2 with trait1{
+  def method1(): Unit ={
+    println("i am method 1")
+
+  }
+  def method2(): Unit ={
+    println("i am method 2")
+  }
+}
+object tr{
+  def main(args: Array[String]): Unit = {
+    val t=new trait3()
+    t.method1()
+    t.method2()
+  }
+}
