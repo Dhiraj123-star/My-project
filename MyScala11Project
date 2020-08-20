@@ -1,0 +1,12 @@
+import scala.collection.immutable._
+object setEx4 {
+  def main(args: Array[String]): Unit = {
+    val set2 = Set("python", "scala", "kotlin", "java")
+    val set3 = Set("c", "c++", "sql", "html","python","scala")
+    var setIntersection= set2.intersect(set3)
+    println("intersection by using intersect method:"+ setIntersection)
+    println("intersection using & operator "+ (set2&set3))
+    var setUnion=set2.union(set3)
+    println(setUnion)
+  }
+}
