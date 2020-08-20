@@ -1,0 +1,18 @@
+class thisExample {
+  var id:Int=0
+  var name:String="java "
+  def this(id:Int,name:String){
+    this()
+    this.id=id
+    this.name=name
+  }
+  def show(): Unit ={
+    println("id "+ id+ " name "+name)
+  }
+}
+object thisone{
+  def main(args:Array[String]): Unit ={
+    var t=new thisExample(121,"kotlin")
+    t.show()
+  }
+}
