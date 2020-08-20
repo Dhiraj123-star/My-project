@@ -1,0 +1,17 @@
+object mapEx {
+  def main(args: Array[String]): Unit = {
+    var map=Map(("1","scala"),("2","python"),("3","kotlin"),("4","java"))
+    var map2=Map("1"->"C","2"->"C#")
+    var emptymap:Map[String,String]=Map.empty[String,String]
+    println("printing the map one by one")
+    println(map)
+    println(map2)
+    println("empty map :"+ emptymap)
+    println("adding and removing elements from the map ")
+    var newmap=map2+("3"->"perl")
+    println("after adding new element :"+ newmap)
+    var removeElem=newmap-("2")
+    println("after removing an element :"+removeElem)
+  }
+
+}
