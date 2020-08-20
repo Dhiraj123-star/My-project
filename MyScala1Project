@@ -1,0 +1,12 @@
+object highorderfun2 {
+def main(args:Array[String]): Unit ={
+  var result=multiplyby2(add2(50))
+  println(result)
+}
+  def add2(a:Int):Int={
+    a+2
+  }
+  def multiplyby2(a: Int):Int={
+  a*2
+  }
+}
