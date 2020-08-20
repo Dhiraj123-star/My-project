@@ -1,0 +1,15 @@
+class stringEx3 {
+  var s1="scala and kotlin both run on JVM "
+  var s2="Python and scala are easy to learn"
+  var s3="scala and kotlin both run on JVM "
+def compare(): Unit ={
+  println(s1==s3)
+  println(s2==s3)
+}
+}
+object strcmp{
+  def main(args: Array[String]): Unit = {
+    var s=new stringEx3()
+    s.compare()
+  }
+}
