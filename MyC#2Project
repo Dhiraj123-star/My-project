@@ -1,0 +1,24 @@
+using System;
+
+namespace ConsoleApplication126
+{
+    internal class SwapEXProgram
+    {
+        public static void Main(string[] args)
+        {
+            //swap two numbers
+            int a, b;
+            Console.WriteLine("enter the first number :");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter the second number :");
+            b = int.Parse(Console.ReadLine());
+            //swap with multiplication and division
+            a = a * b;
+            b = a / b;
+            a = a / b;
+            Console.WriteLine("after the swap a= " +a+ ",b= "+b);
+        }
+
+       
+    }
+}
