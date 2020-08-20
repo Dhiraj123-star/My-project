@@ -1,0 +1,16 @@
+object Array_String {
+  def main(args: Array[String]): Unit = {
+    var name=Array("scala","Python","C","C++")
+    println("accessing the second element !!")
+    println(name(1))
+    var str1="hello Scala"
+    var str2=" Be lucky to learn here!!"
+    println(" adding two strings")
+    println(str1+str2)
+    println("concantenate of two strings by using function!!")
+    var newstr=str1.concat(str2)
+    println("new string !!!  "+ newstr)
+    println("welcome to Scala "+"here we are to help you ,Be Lucky!!!")
+
+  }
+}
