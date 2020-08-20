@@ -1,0 +1,19 @@
+import scala.collection.immutable._
+object queueEx {
+  def main(args: Array[String]): Unit = {
+    var queue=Queue(12,45,67,78,90)
+    var queue2:Queue[Int]=Queue(90,190,200,345)
+    println("printing the queue")
+    println(queue)
+    println(queue2)
+    println("printing elements")
+    queue.foreach((element:Int)=>println(element))
+    var firstelem=queue.front
+    println("first element of queue  "+firstelem)
+    var enqueueQueue=queue.enqueue(100)
+    print("\n element is added in the queue ")
+    enqueueQueue.foreach((element:Int)=>println(element))
+    var dequeueQueue=queue.dequeue
+    print("\n element deleted from this queue: " + dequeueQueue)
+  }
+}
