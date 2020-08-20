@@ -1,0 +1,22 @@
+class addMatrix {
+  var arr1=Array(Array(12,45,56,67),Array(12,45,56,67))
+  var arr2=Array(Array(12,45,56,67),Array(12,45,56,67))
+  var arr3=Array.ofDim[Int](2,4)
+  def show(): Unit ={
+    for(i <- 0 to 1){
+      for(j <- 0 to 3){
+        arr3(i)(j)=arr1(i)(j)+ arr2(i)(j)
+        print(" "+arr3(i)(j))
+
+      }
+      println()
+    }
+
+  }
+}
+object add{
+  def main(args: Array[String]): Unit = {
+    var a=new addMatrix()
+    a.show()
+  }
+}
