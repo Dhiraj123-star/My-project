@@ -1,0 +1,16 @@
+import scala.collection.immutable._
+object listset {
+  def main(args: Array[String]): Unit = {
+    var listset=ListSet(12,45,56,67,899)
+    println("the elements in the listset")
+    listset.foreach((element:Int)=>println(element))
+    println("creating an empty listset")
+    var listset2:ListSet[String]=ListSet.empty
+    println(listset2)
+    println("adding the element in listset2")
+    listset2+="kotlin"
+    listset2+="scala"
+    println("printing after adding element")
+    listset2.foreach((element:String)=>println(element))
+  }
+}
