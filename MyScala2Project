@@ -1,0 +1,8 @@
+import scala.collection.immutable.HashSet
+object hashset {
+  def main(args: Array[String]): Unit = {
+    var hashSet=HashSet(90,12,45,44,67)
+    println("printing the hashset ")
+    hashSet.foreach((element:Int)=>println(element))
+  }
+}
