@@ -1,0 +1,20 @@
+class strmethod {
+  var s1="this is string method example  "
+    var s2="hello scala"
+  var s3="hello scala"
+  def method(): Unit ={
+    println(s1.equals(s2)) //equals method in scala
+    println(s2.equals(s3))
+    println(s2.compareTo(s1)) //compareto method in scala
+    println(s2.compareTo(s3))
+    println(s1.concat(s2)) //concentation in scala
+    println(s2.substring(0,5)) //substring method in scala
+  }
+
+}
+object strmet{
+  def main(args: Array[String]): Unit = {
+    var s=new strmethod()
+    s.method()
+  }
+}
