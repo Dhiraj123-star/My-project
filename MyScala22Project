@@ -1,0 +1,15 @@
+import scala.collection.immutable._
+object bitset {
+  def main(args: Array[String]): Unit = {
+    var numbers=BitSet(12,45,56,5,0)
+    numbers.foreach((element:Int)=>println(element))
+    println("adding the element in the Bitset")
+    numbers+=90
+    println("after adding 90 :")
+    numbers.foreach((element:Int)=>println(element))
+    println("removing the element from bitset")
+    numbers-=0
+    println("after removing 0 from hashset")
+    numbers.foreach((element:Int)=>println(element))
+  }
+}
