@@ -1,0 +1,17 @@
+import scala.collection.immutable._
+object setEx2 {
+  def main(args: Array[String]): Unit = {
+    val set2 = Set("python", "scala", "kotlin", "java")
+    val set3 = Set("c", "c++", "sql", "html")
+    val mergeset = set2 ++ set3
+    println("the size of set2 is " + set2.size)
+    println("the size of set3 is " + set3.size)
+    println("the size of mergeset " + mergeset.size)
+    println("the merged set is " + mergeset)
+    println("checking the element in set ??")
+    println("python exist in set2 "+ set2.contains("python"))
+    println("mysql exist in set3 "+ set3.contains("mysql"))
+
+
+  }
+}
