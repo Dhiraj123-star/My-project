@@ -1,0 +1,28 @@
+import scala.collection.immutable._
+object vectorEx {
+  def main(args: Array[String]): Unit = {
+    var vector:Vector[Int]=Vector(90,100,124,56)
+    var vector2=Vector(12,45,66,6)
+    var vector3=Vector.empty
+    println("printing vector one by one!!")
+    println(vector)
+    println(vector2)
+    println(vector3)
+    println("some operations on vector")
+    var vector4=Vector("scala","kotlin","python","java")
+    println("printing vector4")
+    vector4.foreach((element:String)=>println(element))
+    var newvector=vector4:+"C"  //adding the new element
+    println("adding the element ")
+    newvector.foreach((element:String)=>println(element))
+    var mergevector=vector ++vector2
+    println("after merging the elements:")
+    mergevector.foreach((element:Int)=>println(element))
+    var reverse=mergevector.reverse
+    println("reverse the vector")
+    reverse.foreach((element:Int)=>println(element))
+    var sortedvector=mergevector.sorted
+    println("\n vector elements after sorting!!!")
+    sortedvector.foreach((element:Int)=>println(element))
+  }
+}
