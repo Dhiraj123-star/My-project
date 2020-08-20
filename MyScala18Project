@@ -1,0 +1,20 @@
+object tupleEx {
+  def main(args:Array[String]): Unit ={
+    var tuple1=(90,100,4,50)   //tuple of the integer type
+    var tuple2=("scala","python","c#","java") //tuple of string data type
+    var tuple3=(12.4,56.6,67.6)//tuple of float type data
+    var tuple4=(12,34.9,"python")//tuple of mixed data type
+    println("printing of tuple elements !!")
+    println(tuple1)
+    println(tuple2)
+    println(tuple3)
+    println(tuple4)
+    println("iterating values!!!")
+    tuple1.productIterator.foreach(println) //iterating the tuple value using productIterator
+    println("accessing values!!")
+    println(tuple1._1)
+    println(tuple4._3)
+
+  }
+
+}
