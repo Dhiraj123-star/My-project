@@ -1,0 +1,11 @@
+import scala.collection.immutable._
+object setEx5 {
+  def main(args: Array[String]): Unit = {
+    var number:SortedSet[Int]=SortedSet(4,5,67,78,100,78,77,89)
+    number.foreach((element:Int)=>println(element))
+    println("printing the element using for loop")
+    for(num<-number){
+      println(num)
+    }
+  }
+}
