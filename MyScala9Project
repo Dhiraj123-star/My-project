@@ -1,0 +1,23 @@
+import scala.collection.immutable._
+object setEx3 {
+  def main(args: Array[String]): Unit = {
+    var set2 = Set("python", "scala", "kotlin", "java")
+    println(set2)
+    set2 +="mysql"  //adding element in the set
+    set2+="C"   //adding element in the set
+    println("the set after adding 2 elements:")
+    println(set2)
+    set2-="kotlin"  //removing element from the set
+    println("the set after removing 1 element:")
+    println(set2)
+    println("printing the elements using loop")
+    for (set4 <- set2) {
+      println(set4)
+    }
+      println("printing the elements using foreach loop!!!")
+      set2.foreach((f:String)=>println(f))
+
+      }
+
+
+}
