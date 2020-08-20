@@ -1,0 +1,14 @@
+class stringEx2 {
+  var s1="Scala is mainly used in data science "
+  var s2="i am learn Scala programming language "
+  def show(): Unit ={
+    println(s2+s1)
+  }
+
+}
+object string2{
+  def main(args: Array[String]): Unit = {
+    var s=new stringEx2()
+    s.show()
+  }
+}
