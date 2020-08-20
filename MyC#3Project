@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApplication127
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            int num1, num2;
+            Console.WriteLine("enter the first number :");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("enter the second number :");
+            num2= int.Parse(Console.ReadLine());
+            //swap two numbers by addition and subtraction
+            num1 = num1 + num2;
+            num2 = num1 - num2;
+            num1 = num1 - num2;
+            Console.WriteLine("after the swap :"+"num1 = "+num1+ ",num2= "+num2);
+            
+        }
+    }
+}
