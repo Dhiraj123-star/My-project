@@ -1,0 +1,13 @@
+import scala.collection.immutable._
+object setEx {
+def main(args:Array[String]): Unit ={
+  val set1=Set()
+  val games=Set("cricket","football","tennis","volleyball")
+  println(set1)
+  println(games)
+  println(games.head) //returns the first element
+  println(games.tail) //returns all the element except the first element
+  println(games.isEmpty) //check whether set is empty or not?
+println(set1.isEmpty)
+}
+}
