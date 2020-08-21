@@ -1,0 +1,19 @@
+using System;
+using System.IO;
+namespace ConsoleApplication96
+{
+    internal class FileStreamEx
+    {
+        public static void Main(string[] args)
+        {
+            using (TextWriter writer = File.CreateText("e:\\f.txt"))
+            {
+                writer.WriteLine("hello c#");
+                writer.WriteLine("c# file handling written by Dhiraj and helped by JavaTpoint ");
+                
+            }
+            Console.WriteLine("data written successfully !!!");
+            
+        }
+    }
+}
