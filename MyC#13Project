@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+namespace ConsoleApplication102
+{
+    internal class hashsetEx
+    {
+        public static void Main(string[] args)
+        {
+            //creates a set of strings 
+            var names=new HashSet<string>(); //in this hashset, duplicate items are not allowed
+            //another method to store the hashset
+            var names1=new HashSet<string>(){"c#","python","java","scala"};
+            names.Add("sonno");
+            names.Add("rahul");
+            names.Add("ramesh");
+            names.Add("sonno"); //not allowed
+            //iterate through the hashset
+            foreach (var VARIABLE in names)
+            {
+                Console.WriteLine(VARIABLE);
+                
+            }
+            Console.WriteLine("iterate the second hashset");
+            foreach (var VARIABLE in names1)
+            {
+                Console.WriteLine(VARIABLE);
+                
+            }
+        }
+    }
+}
