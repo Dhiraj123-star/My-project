@@ -1,0 +1,17 @@
+using System;
+using System.IO;
+namespace ConsoleApplication97
+{
+    internal class Program
+    {
+        public static void Main(string[] args)
+        {
+            using (TextReader tr = File.OpenText("e:\\f.txt"))
+            {
+              //  Console.WriteLine(tr.ReadToEnd());  //uncomment to read all line :)
+                Console.WriteLine("read only one line :");
+                Console.WriteLine(tr.ReadLine());
+            }
+        }
+    }
+}
