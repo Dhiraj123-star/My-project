@@ -1,0 +1,18 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	/* finding the
+	length of the String
+	 */
+	myStr:="hello Go Program, I am here to Learn You :)"
+fmt.Println(myStr)
+	fmt.Println("the Length of the string is :",len(myStr))
+	fmt.Println("Concatenating the String:")
+	two_str:=[]string{"Dhiraj","Go Programmer"}
+	fmt.Println(strings.Join(two_str," "))
+}
