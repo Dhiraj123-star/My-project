@@ -1,0 +1,37 @@
+package main
+
+import "fmt"
+
+func main() {
+	//A map is a collection of key-value Pair
+	//created with varname:=make(map[keyType]:valueType])
+	prog_rate:=make(map[string]int)
+	prog_rate["Python Programming"]=1
+	prog_rate["Java Programming"]=2
+	prog_rate["Go Programming"]=3
+	prog_rate["Kotlin Programming"]=4
+	prog_rate["swift Programming"]=5
+	for i,value :=range prog_rate{
+		fmt.Println(i,value )
+	}
+
+	//now Printing the value
+	fmt.Println("the rating of java Programming",prog_rate["Java Programming"])
+	//get the no. of items in the map
+	fmt.Println("the length of map :",len(prog_rate))
+	//added new value into the map
+	prog_rate["Scala Programming"]=6
+	//now get the no. of items in the map
+	fmt.Println("the length of the map after appending new item ",len(prog_rate))
+	//we can delete by passing the key to delete
+	delete(prog_rate,"Kotlin Programming")
+	//now after delete getting the length
+	fmt.Println("the length after deleting the item :",len(prog_rate))
+	fmt.Println("iterate through the map: ")
+	for i,value :=range prog_rate{
+		fmt.Println(i,value )
+	}
+
+
+	
+}
