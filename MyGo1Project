@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+)
+
+func main() {
+	//now reading the file
+	data,err:=ioutil.ReadFile("file1.txt")
+	if err!=nil{
+	fmt.Println("file reading error ",err)
+		return
+	}
+	fmt.Println("contents of the file:",string(data))
+	
+}
