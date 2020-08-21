@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApplication110
+{
+    internal class Program
+    {
+        //generic type class example
+        class GenericClass<T>
+        {
+            public GenericClass(T msg)
+            {
+                Console.WriteLine(msg);
+            }
+        }
+
+        class GenericEx
+        {
+            
+        }
+        public static void Main(string[] args)
+        {
+            GenericClass<string>gen=new GenericClass<string>("this is the string example of generic class");
+            GenericClass<int>gen1=new GenericClass<int>(12);
+            GenericClass<char>gen2=new GenericClass<char>('G');
+            
+        }
+    }
+}
