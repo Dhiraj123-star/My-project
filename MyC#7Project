@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+namespace ConsoleApplication101
+{
+    internal class listEx
+    {
+        public static void Main(string[] args)
+        {
+            //creates a list of strings using collection initializer
+            var names = new List<string>(){"c#", "python", "java", "scala", "kotlin"};
+            //iterate through the list
+            foreach (var s in names)
+            {
+                Console.WriteLine(s);
+                
+            }
+        }
+    }
+}
