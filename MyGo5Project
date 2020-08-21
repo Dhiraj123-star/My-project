@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main() {
+	var num int
+	fmt.Println("enter your number :")
+	fmt.Scanln(&num)
+	fmt.Println("the factorial of the given number :",factorialNum(num))
+	
+}
+func factorialNum(n int )int{
+	if n==0{
+		return  1
+	}
+	return n *factorialNum(n-1)
+
+}
