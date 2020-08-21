@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+namespace ConsoleApplication106
+{
+    internal class LinkedListEx
+    {
+        public static void Main(string[] args)
+        {
+            //create a list of strings
+            var names=new LinkedList<string>();
+            names.AddLast("C#");
+            names.AddLast("Python");
+            names.AddLast("java");
+            names.AddLast("kotlin");
+                //insert new element before java
+                LinkedListNode<string> node = names.Find("java");
+                names.AddBefore(node, "C");
+                names.AddAfter(node, "C++");
+                //iterate list elements using foreach
+                foreach (var VARIABLE in names)
+                {
+                    Console.WriteLine(VARIABLE);
+                    
+                }
+
+        }
+    }
+}
