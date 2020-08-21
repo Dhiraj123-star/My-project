@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+namespace ConsoleApplication107
+{
+    internal class DictionaryEx
+    {
+        public static void Main(string[] args)
+        {
+            Dictionary<string,string>names=new Dictionary<string, string>();
+            names.Add("1.","C#");
+            names.Add("2.","Python");
+            names.Add("3.","java");
+            names.Add("4.","scala");
+            names.Add("5.","Kotlin");
+            foreach (KeyValuePair<string,string>kv in names)
+            {
+                Console.WriteLine(kv.Key+" "+kv.Value);
+                
+            }
+        }
+    }
+}
