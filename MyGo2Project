@@ -1,0 +1,28 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	f,err:=os.Create("file1.txt")
+	if err!=nil{
+		fmt.Println(err)
+		return
+	}
+	//writing Contents into the file "file1.txt"
+	l,err:=f.WriteString("Go Programming is just a fun to learn!!")
+	if err!=nil{
+		fmt.Println(err)
+		f.Close()
+		return
+	}
+	fmt.Println(l,"bytes written ")
+	err=f.Close()
+	if err!=nil{
+		fmt.Println(err)
+		return
+	}
+	
+}
