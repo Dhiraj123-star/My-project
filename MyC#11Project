@@ -1,0 +1,41 @@
+using System;
+using System.Data.SqlTypes;
+
+namespace ConsoleApplication112
+{
+    //delegates example
+    delegate int calculator(int n);//declaring delegates
+    
+    internal class DelegateEx
+    {
+        private static int number = 100;
+
+        public static int add(int n)
+        {
+            number += n;
+            return number;
+        }
+
+        public static int mul(int n)
+        {
+            number *= n;
+            return number;
+        }
+
+        public static int getnumber()
+        {
+            return number;
+        }
+        public static void Main(string[] args)
+        {
+          calculator c1=new calculator(add);//instantiating delegate
+          calculator c2=new calculator(mul);
+          c1(20);//calling method using delegates
+          Console.WriteLine("after c1 delegate, Number is :"+getnumber());
+          c2(3);
+          Console.WriteLine("after c2 delegate, Number is:"+getnumber());
+
+
+        }
+    }
+}
