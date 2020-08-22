@@ -1,0 +1,16 @@
+package main
+
+import "fmt"
+
+type student struct {
+	stid int
+}
+var m=map[string] student{
+	"dhiraj":{94456},
+	"pratham":{65775},
+
+}
+func main() {
+	fmt.Println(m)
+	
+}
