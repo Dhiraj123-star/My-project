@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func swapstr(s1,s2 string)(string,string){
+	return s2,s1
+}
+func main() {
+	var str1,str2 string
+	fmt.Println("enter your first String")
+	fmt.Scanln(&str1)
+	fmt.Println("enter your Second String:")
+	fmt.Scanln(&str2)
+	ret1,ret2:=swapstr(str1,str2)
+	fmt.Println("the reverse strings are :",ret1,ret2)
+	
+}
