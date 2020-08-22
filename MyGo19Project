@@ -1,0 +1,14 @@
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func main() {
+	//program for finding square root of given number
+	fmt.Println("enter your number:")
+	var num float64
+	fmt.Scanln(&num)
+	fmt.Println("the square root of the input number :",math.Sqrt(num))
+}
