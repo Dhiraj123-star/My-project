@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+
+func main() {
+x:=10
+fmt.Println("before calling , the value of x is :",x)
+fmt.Println("the address of the variable x is :",&x)
+changeX(&x)  //calling the function by its reference parameter
+fmt.Println(x)
+
+}
+func changeX(x *int){
+	*x=0
+}
