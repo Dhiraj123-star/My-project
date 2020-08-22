@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+func calculator( a int, b int){
+	add:=a+b
+	sub:=a-b
+	mul:=a*b
+	div:=a/b
+	fmt.Println("the addition :",add)
+	fmt.Println("the subtraction:",sub)
+	fmt.Println("the multiplication",mul)
+	fmt.Println("the division:",div)
+}
+func main() {
+	var a int
+	var b int
+	fmt.Println("enter the value of a :")
+	fmt.Scanln(&a)
+	fmt.Println("enter the value of b: ")
+	fmt.Scanln(&b)
+	calculator(a,b)
+
+}
