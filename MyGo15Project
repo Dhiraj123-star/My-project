@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+	//switch statement with fallthrough
+	var x int
+	fmt.Println("enter your value :")
+	fmt.Scanln(&x)
+	fmt.Println("switch statement with fallthrough")
+	switch x {
+	case 1:
+		fmt.Println("1")
+		fallthrough
+	case 2:
+		fmt.Println("2")
+		fallthrough
+
+	case 3:
+		fmt.Println("3")
+	default:
+		fmt.Println("this Shows your fall :)")
+	}
+	
+}
