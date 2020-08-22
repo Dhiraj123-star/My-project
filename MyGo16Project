@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main() {
+	//shorthand method of switch Statement in Go
+	var day1 int
+	fmt.Println("enter your day :")
+	fmt.Scanln(&day1)
+	switch day:=day1 ;day{
+	case 1,2,3,4,5,6,7:
+		fmt.Println("this is your day, let's Enjoy :)")
+	default:
+		fmt.Println("what are you thinking about the day :(")
+
+	}
+	
+}
