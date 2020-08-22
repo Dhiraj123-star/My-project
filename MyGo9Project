@@ -1,0 +1,42 @@
+package main
+
+import "fmt"
+
+//structure Program Example
+	type Books struct {
+		title string
+		author string
+		subject string
+		book_id int
+
+
+	}
+	func main(){
+		var book1 Books  /*declare type of
+		                       Books */
+		var book2 Books
+		//book1 Specification
+		book1.title="Go Programming"
+		book1.author="Dhiraj"
+		book1.subject="Programming"
+		book1.book_id=123
+		//book2 specification
+		book2.title="Python Programming"
+		book2.author="Pratham"
+		book2.subject="Programming"
+		book2.book_id=124
+		//printing the details of book1
+		fmt.Printf( "Book 1 title : %s\n", book1.title)
+		fmt.Printf( "Book 1 author : %s\n", book1.author)
+		fmt.Printf( "Book 1 subject : %s\n", book1.subject)
+		fmt.Printf( "Book 1 book_id : %d\n", book1.book_id)
+		//printing the details of book2
+		fmt.Printf( "Book 2 title : %s\n", book2.title)
+		fmt.Printf( "Book 2 author : %s\n", book2.author)
+		fmt.Printf( "Book 2 subject : %s\n", book2.subject)
+		fmt.Printf( "Book 2 book_id : %d\n", book2.book_id)
+
+
+	}
+	
+
