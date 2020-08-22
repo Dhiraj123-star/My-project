@@ -1,0 +1,20 @@
+package main
+
+import "fmt"
+
+func main() {
+	rect1:=Rectangle{height:10,Width:20}
+	fmt.Println("rectangle dimension is ",rect1.Width,"width",rect1.height,"height ")
+	fmt.Println("area of the rectangle =",rect1.area())
+
+	
+}
+type Rectangle struct {
+	height float64
+	Width float64
+}
+func (rect *Rectangle)area()float64{
+	return rect.Width*rect.height
+
+
+}
