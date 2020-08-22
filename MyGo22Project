@@ -1,0 +1,27 @@
+package main
+
+import "fmt"
+
+func main() {
+//we pass the value of a variable to the function
+	x:=1000
+	changeVar(x)
+	fmt.Println("x=",x)
+	//if we pass a reference to the variable we can change the value in the function
+	ChangeXValNow(&x)
+	fmt.Println("x=",x)
+	//get the address x points to with &
+	fmt.Println("memory Address for x =",&x)
+	//we can also generate a pointer with new
+	
+}
+func changeVar(x int){
+	//has no effect on the value of x in main()
+	x=2
+
+}
+func ChangeXValNow(x *int ) {
+	//* signals that we are being sent a reference to the value
+	*x = 2 //stores 2 in the memory address x refers to
+
+}
