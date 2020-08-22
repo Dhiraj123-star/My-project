@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func main() {
+	var marks int
+	fmt.Println("Enter your marks :")
+	fmt.Scanln(&marks)
+	fmt.Println("Go switch With no expression ") //boolean expression
+	switch  {
+	case marks >60:
+		fmt.Println("Passed With 'A' Grade ")
+	case marks<60 &&marks>=50:
+		fmt.Println("passed With 'B+' Grade")
+	case marks <50 &&marks>=40:
+		fmt.Println("Passed With 'C' Grade")
+	default:
+		fmt.Println("You're fail!!!")
+
+	}
+	
+}
