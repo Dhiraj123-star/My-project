@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+
+type mystruct struct {
+	name string
+	class string
+	rollno int
+}
+func main() {
+	var my mystruct
+	var my2 mystruct
+	//my Specification
+	my.name="Dhiraj"
+	my.class="Bca"
+	my.rollno=918106
+	//my2 specification
+	my2.name="Pratham"
+	my2.class="12th"
+	my2.rollno=912344
+	//print my info
+	printinfo(my)
+	//print my2 info
+	printinfo(my2)
+
+}
+func printinfo( m mystruct){
+	fmt.Println("name of the  student :",m.name)
+	fmt.Println("class of the  student :",m.class)
+	fmt.Println("Rollno of the  student :",m.rollno)
+}
