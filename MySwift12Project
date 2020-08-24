@@ -1,0 +1,22 @@
+//enum in swift Programming
+enum ConnectionStatus{
+ case Unknown
+case Disconnected
+case Connecting
+case Connected
+}
+var connectionStatus = ConnectionStatus.Connecting
+connectionStatus = .Disconnected
+ 
+switch connectionStatus{
+case .Disconnected:
+ print("Disconnected")
+ case .Connected:
+print("Connected")
+case .Connecting:
+print("Connecting")
+default:
+print("Unknown status")
+}
+
+ 
