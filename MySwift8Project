@@ -1,0 +1,10 @@
+//structures in Swift
+struct Computer
+{
+var harddisk:Int
+var mouse :Int
+}
+var x = Computer( harddisk:1000, mouse:100)
+ print(x)
+print(" memory inside the harddisk is \(x.harddisk)")
+print(" click by the mouse \(x.mouse)")
