@@ -1,0 +1,12 @@
+//this is the example of string  function in swift
+var stringA="hello world"
+print(stringA)
+//string creation using String Instance
+var stringB=String("Swift Programming")
+print(stringB)
+//multiple line string
+let stringC="""
+This is the multiline String in  swift 
+Programming , this is my first experience with swift.
+"""
+print(stringC)
