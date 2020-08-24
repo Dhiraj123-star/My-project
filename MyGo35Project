@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+present:=time.Now()
+fmt.Println("today:",present.Format("Mon,Jan 2 ,2006 at 3:04 pm"))
+someTime:=time.Date(2020,time.March,25,11,30,55,1234,time.Local)
+//compare time with time.Equal()
+sameTime:=someTime.Equal(present)
+fmt.Println("some Time equals to now ?:",sameTime)
+//calculate the time different between today and long time ago
+diff:=present.Sub(someTime)
+//convert diff into days
+days:=int(diff.Hours()/24)
+fmt.Printf("25 March 2020 was %d days ago\n",days)
+}
