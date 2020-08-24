@@ -1,0 +1,21 @@
+//instance Methods 
+class calculate{
+let a:Int
+let b:Int
+let res:Int
+init(a:Int,b:Int){
+self.a = a
+self.b = b
+res = a+b
+}
+func tot(c:Int)->Int{
+return res-c
+}
+
+func result(){
+print("Result is :\(tot(c:20))")
+print("Result is :\(tot(c:100))")
+}
+}
+let pri = calculate(a:200,b:100)
+pri.result()
