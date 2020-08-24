@@ -1,0 +1,36 @@
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func main() {
+p:=fmt.Println
+present:=time.Now()
+p(present)
+DoB:=time.Date(1997,9,05,9,04,39,213,time.Local)
+fmt.Println(DoB)
+fmt.Println(DoB.Year())
+fmt.Println(DoB.Month())
+fmt.Println(DoB.Day())
+fmt.Println(DoB.Hour())
+fmt.Println(DoB.Minute())
+fmt.Println(DoB.Second())
+fmt.Println(DoB.Nanosecond())
+fmt.Println(DoB.Location())
+fmt.Println(DoB.Weekday())
+fmt.Println(DoB.Before(present))
+fmt.Println(DoB.After(present))
+fmt.Println(DoB.Equal(present))
+fmt.Println("here diff is used ")
+diff:=present.Sub(DoB)
+fmt.Println(diff)
+fmt.Println(diff.Hours())
+fmt.Println(diff.Minutes())
+fmt.Println(diff.Seconds())
+fmt.Println(diff.Nanoseconds())
+fmt.Println(DoB.Add(diff))
+fmt.Println(DoB.Add(-diff))
+
+}
