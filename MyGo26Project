@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+
+	"regexp")
+func main() {
+	re:=regexp.MustCompile(".com") //assigning the substring to find out in the string
+	fmt.Println(re.FindString("google.com")) //here, we find out the string's matching
+	fmt.Println(re.FindString("abc.org"))  //if no match , it returns nothing i.e empty
+	fmt.Println(re.FindString("fb.com"))
+	//finding the index of matching
+	fmt.Println(re.FindStringIndex("google.com"))
+	fmt.Println(re.FindStringIndex("abc.org"))
+	fmt.Println(re.FindStringIndex("fb.com"))
+	//using method FindStringSubMatch
+	re1:=regexp.MustCompile("f([a-z]+)ing ")
+	fmt.Println(re1.FindStringSubmatch("flying "))
+	fmt.Println(re1.FindStringSubmatch("abcfloatingxyz"))
+
+	
+}
