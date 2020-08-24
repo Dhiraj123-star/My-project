@@ -1,0 +1,18 @@
+package main
+
+import "fmt"
+
+func main() {
+fmt.Println("program for finding factorial of given number in GO Programming :)")
+var f int
+fmt.Println("enter your number for which you want to find factorial:")
+fmt.Scanln(&f)
+fmt.Println(factorial(f))
+
+}
+func factorial(num int )int{
+	if num==0{
+		return  1
+	}
+	return  num*factorial(num-1)
+}
