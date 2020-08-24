@@ -1,0 +1,26 @@
+//dictionary in swift Programming
+let DictionaryEx=["C":90,"C++":100,"java":120,"Python":190,"Go":200]
+print(DictionaryEx)
+//let Combine two Array into dictionary
+let CustomKeys=["Go","Python","kotlin","scala","swift"]
+let CustomValues=[100,200,400,350,600]
+let newDictionary = Dictionary(uniqueKeysWithValues:zip(CustomKeys,CustomValues))
+print("after zipping the both the Array into dictionary")
+print(newDictionary)
+//finding the values from the Dictionary
+print("finding the values from the dictionary")
+print(newDictionary["Python"])
+print(DictionaryEx["java"])
+//printing the contents Of the dictionary in loop
+for(key,value) in newDictionary{
+print("key:\(key)value:\(value)")
+}
+//modify the data in the Dictionary
+var valDictionary=["India":"new Delhi","pakistan": "islamad","china":"beijing","USA":"washington D.C"]
+valDictionary["pakistan"]="xyz"
+print("after the Modification")
+print(valDictionary)
+//changing the Elements in the dictionary
+valDictionary["India"]="NEW DELHI"
+print("after Changing : ")
+print(valDictionary) 
