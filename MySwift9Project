@@ -1,0 +1,9 @@
+//another example of function Overloading in swift
+func output(x:String){
+print("Welcome to \(x)")
+}
+func output( x:Int){
+print("\(x)")
+}
+output( x : "Special")
+output( x: 100)
