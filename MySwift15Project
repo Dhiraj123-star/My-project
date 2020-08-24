@@ -1,0 +1,14 @@
+//use of fallthrough in Swift Programming
+var index=10
+switch index{
+case 100:
+print("hello everyone")
+fallthrough
+case 10,15:
+print("this is swift Programming")
+fallthrough
+case 5:
+print("I'm coding in  This new Programming")
+default:
+print("this is default statement")
+} 
