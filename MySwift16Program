@@ -1,0 +1,10 @@
+//use of guard inside the function
+func Function1(){
+guard false else{
+print("Condition is not satisfied")
+return
+}
+print("Condition is satisfied")
+}
+Function1() //calling the function
+print("after the calling ")
