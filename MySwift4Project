@@ -1,0 +1,6 @@
+//operations on string
+let ConstA = "hello Swift "
+let ConstB = "Programming is all about fun with the code"
+print("Concatenation of both strings")
+let ConstC = ConstA+ConstB
+print(ConstC)
