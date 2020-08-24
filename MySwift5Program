@@ -1,0 +1,13 @@
+//find the length of given string
+let str = "Hello swift Programming"
+print(str.count)
+//comparision of the string
+print("here comparision of the string")
+var varA="hello JavatPoint"
+if varA == str{
+print("both \(varA) and \(str) are equal")
+}
+else{
+
+print("both \(varA) and \(str) are not  equal")
+}
