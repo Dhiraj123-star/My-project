@@ -1,0 +1,50 @@
+package main
+import (
+	"fmt"
+	"reflect"
+	"strings"
+)
+
+func main() {
+	x:="hello Go Programming" //shortCut method of declaring the string
+	fmt.Println(x)
+	fmt.Println(reflect.TypeOf(x))  //it gives type of the variable
+	//various methods of string
+	fmt.Println(len(x))  //finding the length of the string
+	fmt.Println("ASCII value of A is :","A"[0]) //finding the ASCII  code of the character
+	str:="go Programming is fun to learn "
+	fmt.Println(strings.ToUpper(str)) //changing the string  in upper case
+	str1:="GO IS FAR BETTER THAN C AND C++"
+	fmt.Println(strings.ToLower(str1))  //changing the string in lower case
+    fmt.Println(strings.HasPrefix(str1,"GO")) //checking the prefix in the given string
+    fmt.Println(strings.HasSuffix(str,"learn ")) //checking the suffix in the given string
+    var arr=[]string{"g","o","p","r","o","g","r","a","m"}
+    fmt.Println(strings.Join(arr,"-")) //joining the seperator in the string
+    str2:="GO"
+    fmt.Println(strings.Repeat(str2,4)) //repeat the particular string the given time
+    fmt.Println(strings.Contains(str1,"C"))  //check the particular substring present in the string
+    fmt.Println(strings.Index(str,"Programming"))  //finding the index of substring
+    fmt.Println(strings.Count(str,"o"))  //finding the no. of occurrence of particular character
+    fmt.Println(strings.Replace(str,"go","python",1))//it replaces the particular string
+    str4:="Python,GO,both,are,best,programming,language,i,ever,learn"
+    var arr1[]string=strings.Split(str4,",")  //splitting the string on the basis of separator
+    fmt.Println(len(arr1))
+    for i,v :=range arr1{
+    	fmt.Println("index:",i,"value",v)
+	}
+	fmt.Printf("%q\n",strings.Split("x,y,z",","))
+    fmt.Printf("%q\n",strings.Split("john and jack and johny and jinn","and"))
+    fmt.Printf("%q\n",strings.Split("abc",""))
+    fmt.Printf("%q\n",strings.Split("","hello"))
+    fmt.Println(strings.Compare("a","b"))  //comparing two strings , if less than second returns -1
+    fmt.Println(strings.Compare("a","a")) //if equals , then returns 0
+    fmt.Println(strings.Compare("b","a")) //if greater than second , then return 1
+    fmt.Println(strings.TrimSpace("\t\nI love my Go Programming skills "))
+    fmt.Println(strings.ContainsAny("Go Programming ","o"))
+	fmt.Println(strings.ContainsAny("Go Programming ","o &e"))
+	fmt.Println(strings.ContainsAny("Go Programming ",""))
+	fmt.Println(strings.ContainsAny("",""))
+
+
+	
+}
