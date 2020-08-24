@@ -1,0 +1,16 @@
+//empty String creation using String literal
+var stringA = ""
+ if stringA.isEmpty{
+print("string is empty")
+}else{
+print("string is not empty")
+}
+//empty string creation using string Instance
+let stringB = String()
+if stringB.isEmpty{
+print("string is empty")
+}
+else{
+print("string is not empty")
+}
+
