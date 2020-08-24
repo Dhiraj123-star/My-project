@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+//swapping the value inside the function
+func swap(x,y string)(string,string){
+	return y,x
+}
+func main() {
+	a,b:=swap("Programming","Go")
+	fmt.Println("after swapping ")
+	fmt.Println(a,b)
+}
