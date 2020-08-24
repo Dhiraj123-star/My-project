@@ -1,0 +1,14 @@
+//class in Swift
+class Salary{
+var salary :Int
+init(salary:Int)
+{
+self.salary=salary
+}
+}
+class employee
+{
+var salary=1000
+}
+let income = employee()
+print("employee salary is \(income.salary)")
