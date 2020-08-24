@@ -1,0 +1,6 @@
+//function with Parameter and return type
+func greeting(name :String) -> String{
+return "Welcome to JavaTpoint " + name 
+}
+let msg = greeting(name: "Dhiraj")
+print(msg)
