@@ -1,0 +1,67 @@
+#programming for conversion
+import random
+inp=input("hello , i am your assistant! ,please tell me your good name :)")
+print("hello",inp)
+hobby=input("please tell me your hobby ! :)")
+if(hobby=="programming"):
+    print("you love coding ! , i will see your secure future :)")
+else:
+    print("thanks for sharing !, im here to help you , any query?")
+query=input("enter your query")
+if(query=="your name"):
+    print("im your assistant , create by dhiraj :)")
+    print("you know dhiraj?")
+else:
+    print("right now ! im exploring myself !:)")
+    print("next time , i will try :)")
+name=input("if yes!, then tell something about him :)")
+if (name=="good"):
+    print("i know ! ,tell me anything else :)")
+else:
+    print("what , so funny , you have to discover him :)")
+place=input("please tell me your favourite place ?")
+print("you like ",place ,"!")
+print("i like computer world , to live :)")
+food=input("please tell me your favorite food :)")
+print("your favorite food :",food)
+print("my favorite food , computer battery , i know you are laughing right now :)")
+print("lets play game :)")
+print("this is the guessing game: )")
+import math
+ran=random.randint(0,3)
+if (ran==1):
+    print("you selected for finding the area of rectangle :)")
+    length=int(input("enter the length of rectangle:"))
+    breadth=int(input("enter the breadth of rectangle:"))
+    area =l*b
+    print("the area of the selected shape :",area)
+elif(ran==2):
+    print("you selected for finding the area of the circle :)")
+    radius=int(input("enter the radius of the circle:"))
+    area=math.pi*radius**2
+    print("the area of the selected shape :",area)
+elif (ran==3):
+    print("you selected for finding the area of square :)")
+    side=int(input("enter the side of the square:"))
+    area=side**2
+    print("the area of the selected shape :",area)
+else:
+    print("nothing in your hand !, try again it may be")
+print("thanks for using python :)")
+
+print("thanks for playing with me !, i hope you enjoy :)")
+print("Ok ! , if you lose i have one more guessing game , i am sure you enjoy :)")
+name=["dhiraj","komal","hari","nisha","pratham"]
+print("are you ready for the guessing game ?")
+choice=input("enter Y for yes or N for no")
+if choice.upper()=='N' :
+ print("ok , i know your weakness ..")
+elif choice.upper()=='Y':
+    guess_name=input("enter your name:")
+    if guess_name in name:
+        print("you guess right !")
+    else:
+        print("try again :(")
+print("thanks for playing game  :)")
+print("thanks for playing , next time we meet again , right now good bye:",inp)                  
+
