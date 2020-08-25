@@ -1,0 +1,9 @@
+a=[1,5,7]
+b=[3,4,7]
+result=[]
+#for i in range(len(a)):
+    #result.append(a[i] if a[i]<b[i] else b[i])
+result=[min(i) for i in zip(a,b)]
+
+
+print(result)
