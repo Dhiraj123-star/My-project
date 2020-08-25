@@ -1,0 +1,9 @@
+//lazy properties
+class Sample{
+lazy var no = number()
+}
+class number {
+var name = "swift Programming"
+}
+var firstsample = Sample()
+print(firstsample.no.name)
