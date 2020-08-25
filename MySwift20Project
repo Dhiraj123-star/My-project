@@ -1,0 +1,12 @@
+//use of while loop in swift
+var currentLevel:Int=0,finalLevel:Int=10
+let gameCompleted=true
+while(currentLevel<=finalLevel){
+//play game
+if gameCompleted{
+print("you have sucessfully completed level \(currentLevel)")
+currentLevel+=1
+}
+}
+//outside the loop
+print("Terminated ! you are out of the game :(")
