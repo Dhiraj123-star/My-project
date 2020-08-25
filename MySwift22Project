@@ -1,0 +1,7 @@
+//More example On Closure 
+let SimpleClosure:(String )->(String)={name in 
+let greeting = "Hello javatPoint " +  "A platform for all technologies"
+return greeting
+}
+let result = SimpleClosure(" Swift Programming")
+print(result)
