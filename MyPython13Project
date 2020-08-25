@@ -1,0 +1,13 @@
+#abstraction in python
+class employee:
+    __count=0
+    def __init__(self):
+        employee.__count=employee.__count+1
+    def display(self):
+        print("the number of employees :",employee.__count)
+emp=employee()
+emp2=employee()
+try:
+    print(emp.__count)
+finally:
+    emp.display()
