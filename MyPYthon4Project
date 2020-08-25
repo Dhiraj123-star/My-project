@@ -1,0 +1,9 @@
+#list program using loop
+n=int(input("enter your limit:"))
+list=[]
+for i in range(n):
+    j=int(input("enter your number:"))
+    list.append(j)
+print("the final list after inserting elements is:",list)
+print("the maximum value you inserted in your list:",max(list))
+print("the minimum value you inserted in your list:",min(list))
