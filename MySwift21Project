@@ -1,0 +1,5 @@
+//closure With the Parameter
+let SimpleClosure:(String)->()={name in 
+print(name)
+}
+SimpleClosure("Hello Swift Programming, Fun to Learn")
