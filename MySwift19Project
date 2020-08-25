@@ -1,0 +1,9 @@
+//recursion in swift Programming
+func CountDown( count :Int){
+print(count)
+if count>0{
+CountDown(count:count-1)
+}
+}
+print("CountDown Start :)")
+CountDown(count:10)
