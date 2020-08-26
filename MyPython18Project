@@ -1,0 +1,9 @@
+#python program to remove the duplicate of elements from the list
+a=[10,10,3,5,78,90]
+dup_items=set()
+uniq_items=[]
+for x in a:
+    if x not in dup_items:
+        uniq_items.append(x)
+        dup_items.add(x)
+print(dup_items)
