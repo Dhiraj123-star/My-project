@@ -1,0 +1,90 @@
+#python program for staff class's details
+class staff:
+    def getstaff(self,code,name):
+        self.code=code
+        self.name=name
+    def displaystaff(self):
+        print("code:",self.code)
+        print("name:",self.name)
+class teacher(staff):
+    def getteacher(self,subject,pub):
+        self.subject=subject
+        self.pub=pub
+    def displayteacher(self):
+        print("subject:",self.subject)
+        print("publication:",self.pub)
+class typist(staff):
+    def gettypist(self,speed):
+        self.speed=speed
+    def displaytypist(self):
+        print("speed of typing:",self.speed)
+class officer(staff):
+    def getofficer(self,grade):
+        self.grade=grade
+    def displayofficer(self):
+        print("grade of officer:",self.grade)
+class regular(typist):
+    def getregular(self,salary):
+        self.salary=salary
+    def displayregular(self):
+        print("salary of regular typist:",self.salary)
+class casual(typist):
+    def getcasual(self,wages):
+        self.wages=wages
+    def displaycasual(self):
+        print("wages of casual typist:",self.wages)
+#main program
+ch=0
+while ch!=5:
+    print("1.teacher")
+    print("2.officer")
+    print("3.regular typist")
+    print("4.casual typist")
+    print("5.exit")
+    ch=int(input("enter your choice:"))
+    if ch==1:
+        obj=teacher()
+        c=input("enter the code:")
+        n=input("enter name:")
+        s=input("enter subject:")
+        p=input("enter publication")
+        obj.getstaff(c,n)
+        obj.getteacher(s,p)
+        obj.displaystaff()
+        obj.displayteacher()
+    if ch==2:
+        obj=officer()
+        c=input("enter the code:")
+        n=input("enter the name:")
+        g=input("enter the grade:")
+        obj.getstaff(c,n)
+        obj.getofficer(g)
+        obj.displaystaff()
+        obj.displayofficer()
+    if ch==3:
+        obj=regular()
+        c=input("enter the code:")
+        n=input("enter the name:")
+        sp=input("enter the speed:")
+        sal=input("enter the salary:")
+        obj.getstaff(c,n)
+        obj.gettypist(sp)
+        obj.getregular(sal)
+        obj.displaystaff()
+        obj.displaytypist()
+        obj.displayregular()
+    if ch==4:
+        obj=casual()
+        c=input("enter the code:")
+        n=input("enter the name:")
+        sp=input("enter the speed:")
+        w=input("enter the daily wages:")
+        obj.getstaff(c,n)
+        obj.gettypist(sp)
+        obj.getcasual(w)
+        obj.displaystaff()
+        obj.displaytypist()
+        obj.displaycasual()
+else:
+    print("program terminated")
+        
