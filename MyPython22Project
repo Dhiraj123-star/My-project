@@ -1,0 +1,15 @@
+#note program
+def countNotes(amount):
+    notes=[2000,500,200,100,50,20,10,5,2,1]
+    notescounter=[0,0,0,0,0,0,0,0,0,0]
+    print("currency count -->")
+    for i,j in zip(notes,notescounter):
+        if amount>=i:
+            j=amount//i
+            amount=amount-j*i
+            print(i,":",j)
+
+#main program
+
+amount=int(input("enter the amount:"))
+countNotes(amount)
