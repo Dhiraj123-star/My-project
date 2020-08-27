@@ -1,0 +1,25 @@
+class student:
+    def getdata(self,rollno,name,course):
+        self.rollno=rollno
+        self.name=name
+        self.course=course
+    def displaystudent(self):
+        print("roll no:",self.rollno)
+        print("name:",self.name)
+        print("course:",self.course)
+class test(student):   #inheritance 
+    def getmarks(self,marks):
+        self.marks=marks
+    def displaymarks(self):
+        print("total marks:",self.marks)
+r=int(input("enter roll no:"))
+n=input("enter name:")
+c=input("enter course name:")
+m=int(input("enter marks:"))
+#creating an object
+print("result")
+stud1=test()
+stud1.getdata(r,n,c)
+stud1.getmarks(m)
+stud1.displaystudent()
+stud1.displaymarks()
