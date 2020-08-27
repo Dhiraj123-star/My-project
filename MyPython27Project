@@ -1,0 +1,28 @@
+class student(object):
+    def __init__(self,Id,name):
+        self.Id=Id
+        self.name=name
+    def showstudent(self):
+        print("id number of the student:",self.Id)
+        print("name of the student:",self.name)
+class teacher(object):
+    def __init__(self,tec_Id,tec_name,subject):
+        self.tec_Id=tec_Id
+        self.tec_name=tec_name
+        self.subject=subject
+    def showteacher(self):
+        print("Id of the teacher:",self.tec_Id)
+        print("name of the teacher:",self.tec_name)
+        print("subject:",self.subject)
+class school(student,teacher):
+    def __init__(self,Id,name,tec_Id,tec_name,subject,sch_Id):
+        student.__init__(self,Id,name)
+        teacher.__init__(self,tec_Id,tec_name,subject)
+        self.sch_Id=sch_Id
+    def showschool(self):
+        print("id of the school:",self.sch_Id)
+#main program
+sc=school(1184,"dhiraj",100,"jack","python",80)
+sc.showstudent()
+sc.showteacher()
+sc.showschool()
