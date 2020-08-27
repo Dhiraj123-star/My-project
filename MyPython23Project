@@ -1,0 +1,8 @@
+choice='y'
+total=0.0
+while choice=="Y" or choice=='y':
+    item_price=int(input("enter the item price:"))
+    gst=int(input("enter the GST on the item:"))
+    total=total+(item_price+(item_price*gst)/100)
+    choice=input("press y to continue and press enter to exit:")
+print("total amount to be paid:",total)
