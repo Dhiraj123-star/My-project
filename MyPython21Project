@@ -1,0 +1,19 @@
+class student:
+    def getdata(self,name,class1,rollno,sub):
+        self.name=name
+        self.class1=class1
+        self.rollno=rollno
+        self.sub=sub
+    def display(self):
+        print("the name:",self.name)
+        print("the class:",self.class1)
+        print("the rollno:",self.rollno)
+        print("the subject:",self.sub)
+
+st=student()
+name=input("enter your name:")
+class1=input("enter your class:")
+rollno=int(input("enter your rollno:"))
+sub=input("enter your subject:")
+st.getdata(name,class1,rollno,sub)
+st.display()
