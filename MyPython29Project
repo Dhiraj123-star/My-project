@@ -1,0 +1,37 @@
+#python program for multilevel inheritance
+class student:
+    def getdata(self,rollno,name,course):
+        self.rollno=rollno
+        self.name=name
+        self.course=course
+    def displaystudent(self):
+        print("rollno:",self.rollno)
+        print("name:",self.name)
+        print("course:",self.course)
+#inheritance
+class test(student):
+    def getmarks(self,marks):
+        self.marks=marks
+    def displaymarks(self):
+        print("total marks:",self.marks)
+#multilevel inheritance
+class result(test):
+    def calculategrade(self):
+        if self.marks>480:self.grade="distinction"
+        elif self.marks>360:self.grade="first class"
+        elif self.marks>240: self.grade="second class"
+        else:self.grade="failed"
+        print("result:",self.grade)
+#main program
+r=int(input("enter the roll no:"))
+n=input("enter your name:")
+c=input("enter the course:")
+m=int(input("enter the marks:"))
+#creating objects
+print("result")
+stud1=result()#instance of child
+stud1.getdata(r,n,c)
+stud1.getmarks(m)
+stud1.displaystudent()
+stud1.displaymarks()
+stud1.calculategrade()
