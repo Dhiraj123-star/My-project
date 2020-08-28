@@ -1,0 +1,19 @@
+#program to insert a sentence in a specified position in a file
+def fileinsert(str,n,line):
+    with open(str,"r")as file:
+        lis=file.readlines()
+        lis.insert(n,line)
+        lis.insert(n+1,'\n')
+        file.close()
+        print(lis)
+    with open (str,'w') as file:
+        file.writelines(lis)
+        print(lis)
+        file.close()
+#main program
+
+str=input("enter the file name:")
+n=int(input("enter the position of the sentence to be inserted :"))
+line=input("enter the sentence to be inserted:")
+fileinsert(str,n,line)
+print("sentence insertion successful")
