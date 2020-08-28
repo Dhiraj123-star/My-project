@@ -1,0 +1,12 @@
+file1=input("enter the file to be opened for appending:")
+file2=input("enter the file name to be appended:")
+#open the file to in append mod
+fa=open(file1,"a")
+#open a file in read mode
+fr=open(file2,"r")
+for line in fr.readlines():
+    fa.write(line)
+#close the files
+fr.close()
+fa.close()
+print(" 1 file appended")
