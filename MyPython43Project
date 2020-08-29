@@ -1,0 +1,35 @@
+#function to capitalise the first letter of a sentence.
+def capatalize_sentence():
+    f1=open("test_report.txt","r")
+    f2=open("file1.txt","w")
+    while 1:
+        line=f1.readline()  #read a line
+        if not line:
+            break           #encounter eof
+        #strip off the new-line character and any whitespace on the right
+        line=line.rstrip()
+        linelength=len(line)
+        str=' '  #string to concenate all character from line
+        str=str+ line[0].upper()
+        i=1
+        #loop to check a line to convert uppercase
+        while i<linelength:
+            if line[i]==".":
+                str=str+line[i]
+                i=i+1
+                if i>=linelength:
+                    break
+                str=str+line[i].upper()
+            else:
+                str=str+line[i]
+                i+=1
+
+        f2.write(str)
+    else:
+         print("source file does not exist")
+
+    f1.close()
+    f2.close()
+
+capatalize_sentence()
+        
