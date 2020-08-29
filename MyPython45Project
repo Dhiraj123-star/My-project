@@ -1,0 +1,65 @@
+""" queue implementation"""
+def isempty(qu):
+    if qu==[]:
+        return True
+    else:
+        return False
+def enqueue(qu,item):
+    qu.append(item)
+    if len(qu)==1:
+        front=rear=0
+    else:
+        rear=len(qu)-1
+def dequeue(qu):
+    if isempty(qu):
+        return "underflow"
+    else:
+        item=qu.pop(0)
+    if len(qu)==0:
+        front=rear=None
+    return item
+def display(qu):
+    if isempty(qu):
+        print("queue empty")
+    elif len(qu)==1:
+        print(qu[0],"<front,rear>")
+    else:
+        front=0
+        rear=len(qu)-1
+        print(qu[front],"<-front")
+        for a in range(1,rear):
+            print(qu[a])
+        print(qu[rear],"<-rear")
+#...............main...........................
+queue=[]
+while True:
+    print("queue operation")
+    print("1.enqueue")
+    print("2.dequeue")
+    print("3.display queue")
+    print("4.exit")
+    ch=int(input("enter your choice:"))
+    if ch==1:
+        print("for the new memeber, enter details below:")
+        memberno=int(input("enter memeber no:"))
+        membername=input("enter member name:")
+        age=int(input("enter memeber's age"))
+        item=[memberno,membername,age]
+        enqueue(queue,item)
+        input("press enter to continue:")
+    elif ch==2:
+        item=dequeue(queue)
+        if item=="underflow":
+            print("underflow!queue is empty")
+        else:
+            print("dequeue-ed item is",item)
+        input("press enter to continue")
+    elif ch==3:
+        display(queue)
+        input("press enter to continue...")
+    elif ch==4:
+        break
+    else:
+        print("invalid choice")
+        input("enter enter to continue..")
+    
