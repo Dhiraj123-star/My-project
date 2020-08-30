@@ -1,0 +1,26 @@
+#cow bull game
+import random
+def game(num_digits):
+    list_num=[ random.randint(0,9)for n in range(num_digits)]
+    print("solution key ="+str(list_num))
+    count=0
+    while True:
+        count+=1
+        print("___guess ___"+ str(count)+"_____")
+        print("please guess "+ str(num_digits)+"digit number ")
+        guess=[int(i)for i in str(input())]
+        if guess ==list_num:
+            print("you won!!!")
+            print("it took you "+str(count)+"guess(es)")
+            break
+        else:
+            cow=0
+            bull=0
+            for x in range(0,num_digits):
+                if guess[x]==list_num[x]:
+                    cow+=1
+                elif guess[x]in list_num:
+                    bull+=1
+        print("cows :"+str(cow)+"bulls "+str(bull))
+        print("+++++++++++++++++++++++++++++++++")
+game(4)
