@@ -1,0 +1,27 @@
+# calculating area and perimeter through class
+class rectangle:
+    def getdata(self,length,breadth):
+        self.length=length
+        self.breadth=breadth
+    def area(self):
+        a=self.length*self.breadth
+        print("the area of rectangle with length",self.length,"and breadth ",self.breadth,"is",a)
+    def perimeter(self):
+        p=2*(self.length+self.breadth)
+        print("the perimeter of rectangle with length", self.length, "and breadth ", self.breadth, "is", p)
+#main program
+l=int(input("enter the length of the rectangle :"))
+b=int(input("enter the breadth of the rectangle :"))
+obj=rectangle()
+obj.getdata(l,b)
+ch=0
+while(ch!=3):
+    print("1.area")
+    print("2.perimeter")
+    print("3.exit ")
+    ch=int(input("enter your choice "))
+    if ch==1:obj.area()
+    elif ch==2:obj.perimeter()
+else:
+    print("enter the valid input ")
+print("thanks for using python :)")
