@@ -1,0 +1,5 @@
+#string max and min function
+str="python is programming language"
+print("the maximum character is:",max(str))
+str1="www.gravityinstitutegroup.com"
+print("the minimum character is:",min(str1))
