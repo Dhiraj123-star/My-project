@@ -1,0 +1,10 @@
+#program for finding volume of the sphere
+from math import  pi
+radius=float(input("enter the radius :"))
+vol=(4/3)*pi*radius**3
+print("the volume of the sphere is ",vol)
+print("calculating the area and circumference of the circle !!")
+area=pi*radius**2
+circum=2*pi*radius
+print("the area of the circle is :",area)
+print("the circumference of the circle is ",circum)
