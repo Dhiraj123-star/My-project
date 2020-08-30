@@ -1,0 +1,47 @@
+#exception handling example
+try:
+    fh = open("testfile", "w")
+    try:
+        fh.write("this is my test file for exception handling")
+    finally:
+        print("going to close the file !")
+        fh.close()
+except IOError:
+    print("error ! can\'t find file or read data")
+#define a function here
+def temp_convert(var):
+    try:
+        return int(var)
+    except ValueError as Argument:
+        print("the argument does not contain numbers\n",Argument)
+#call above function here
+temp_convert("xyz")
+#exception handling
+def functionName(level):
+    if level<1:
+        raise Exception(level)
+    #code below to this would not be executed
+    #if we raise the exception
+    return level
+try:
+    l=functionName(-10)
+    print("level :",l)
+except Exception as e:
+    print("error in level argument ",e.args[0])
+
+#user defined exception handling
+try:
+    a=int(input("enter your number"))
+    d=a/0
+except ZeroDivisionError:
+    print("error occured")
+finally:
+    print(" i am printing inspite of your error")
+#another example of user defined error
+class Networkerror(RuntimeError):
+    def __init__(self,arg):
+        self.args=arg
+try:
+    raise Networkerror("bad hostname")
+except Networkerror as e:
+    print(e.args)
