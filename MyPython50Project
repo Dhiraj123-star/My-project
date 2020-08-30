@@ -1,0 +1,8 @@
+#random program
+import random
+print("we are going to choose the three students for quiz")
+a=random.randint(1,100)
+b=random.randint(1,100)
+c=random.randint(1,100)
+print("the three choosen students are :",a,b,c)
+print("congrats students :)")
