@@ -1,0 +1,17 @@
+#basic tuple operations
+tup1=(12,45,67)
+tup2=(90,100,120)
+print("comparing two tuples")
+print((tup1<tup2))
+print("the length of both tuples")
+print(len(tup1))
+print(len(tup2))
+print("the maximum elements of two tuples")
+print(max(tup1))
+print(max(tup2))
+print("the minimum elements of two tuples")
+print(min(tup1))
+print(min(tup2))
+list1=[23.6,"dhiraj","python",90,'a']
+print("the list converted into tuples")
+print(tuple(list1))
