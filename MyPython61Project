@@ -1,0 +1,14 @@
+#function for calculating loss or profit
+def calculate(costprice,sellingprice):
+    if sellingprice>costprice:
+        profit=sellingprice-costprice
+        return print("the profit is:",profit)
+    elif costprice>sellingprice:
+        loss=costprice-sellingprice
+        return print(("the loss is",loss))
+#main program
+cp=int(input("enter the cost price"))
+sp=int(input("enter the selling price"))
+calculate(cp,sp)
+print("thanks for using python!!!")
+
