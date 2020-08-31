@@ -1,0 +1,12 @@
+#iterator in python
+import sys
+list=[12,67,78]
+it=iter(list)
+print(next(it))
+for x in it:
+    print(x,end=" ")
+while True:
+    try:
+        print(next(it))
+    except StopIteration:
+        sys.exit()
