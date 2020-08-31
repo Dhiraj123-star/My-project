@@ -1,0 +1,15 @@
+#linear search program in python
+list1=[]
+limit=int(input("enter the list limit"))
+for i in range(limit):
+    num=int(input("enter your number:"))
+    list1.append(num)
+print("now this time for checking element ")
+num=int(input("enter your searched number"))
+for element in range(len(list1)):
+    if list1[element]==num:
+        print("the given number is found at :",element+1)
+        break
+else:
+    print("item is not found :(")
+print("thanks for using python!!!")
