@@ -1,0 +1,35 @@
+#more class example
+class Person:
+    def getperson(self,name,code):
+        self.name=name
+        self.code=code
+    def display(self):
+        print("your name is ",self.name)
+        print("your code is ",self.code)
+class account(Person):
+    def getaccount(self,pay):
+        self.pay=pay
+    def displayaccont(self):
+        print("payment is:",self.pay)
+class admin(Person):
+    def getadmin(self,exp):
+        self.exp=exp
+    def displayadmin(self):
+        print("the experience is :",self.exp)
+class employee(account,admin):
+    print("new class")
+n=input("enter your name")
+c=int(input("enter your code"))
+p=int(input("enter payment"))
+e=input("enter experience ")
+obj=employee()
+obj.getperson(n,c)
+obj.getaccount(p)
+obj.getadmin(e)
+obj.display()
+obj.displayaccont()
+obj.displayadmin()
+
+
+
+
