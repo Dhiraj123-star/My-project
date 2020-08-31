@@ -1,0 +1,16 @@
+#list's sum through function
+def listsum(list1):
+    sum=0
+    for x in list1:
+        sum+=x
+    return sum
+#main program
+list1=[]
+limit=int(input("enter the limit of the list:"))
+for i in range(limit):
+        num=int(input("enter your number:"))
+        list1.append(num)
+print("your given list is:",list1)
+print("now calling the function for sum of its element:")
+sum=listsum(list1)
+print("the resultant sum is :",sum)
