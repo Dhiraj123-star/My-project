@@ -1,0 +1,15 @@
+#program for finding volume and surface area of the cuboid
+side=int(input("enter the side "))
+print("finding the volume and surface area of the cube")
+sa=4*side
+vol=side**3
+print("the surface area of the cube is :",sa)
+print("the volume of the cube is :",vol)
+len=int(input("enter the length of the cuboid"))
+br=int(input("enter the breadth of the cuboid "))
+he=int(input("enter the height of the cuboid "))
+sa=(len*br)+(br*he)+(he*len)
+vol=len*br*he
+print("the surface area of the cuboid :",sa)
+print("the volume of the cuboid :",vol)
+print("thanks for using python ")
