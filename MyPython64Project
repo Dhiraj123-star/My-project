@@ -1,0 +1,17 @@
+#python program for  number
+def near_Thousands(n):
+    if abs(1000-n)<=100:th=True
+    else:th=False
+    if abs(2000-n)<=100 :thd=True
+    else:thd=False
+    return th,thd
+#main program
+n=int(input("enter the number:"))
+k,m=near_Thousands(n)
+if k==True:
+    print("the number is within 100 of 1000")
+elif m==True:
+    print("the number is within 100 of 2000")
+else:
+    print("the number is not within 100 of 1000 or 100 of 2000")
+print("thanks for using python!!!")
