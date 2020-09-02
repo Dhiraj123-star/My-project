@@ -1,0 +1,26 @@
+#binary search using python
+def binary_search(list1,low,high,val):
+    if(high<low):
+        return None
+    else:
+        midval=(low+(high-low)//2)
+#compare the search item with midvalue
+        if list1[midval]>val:
+         return binary_search(list1,low,midval-1,val)
+        elif list1[midval]<val:
+         return binary_search(list1,midval+1,high,val)
+        else:
+         return midval
+#creating list
+list1=[]
+limit=int(input("enter your limit!!"))
+for i in range(limit):
+    num=int(input("enter your number"))
+    list1.append(num)
+print("the resultant list is ",list1)
+print("now we calling the binary search function")
+low=int(input("enter the low limit "))
+high=int(input("enter the high limit"))
+val=int(input("enter the value to be searched"))
+b=binary_search(list1,low,high,val)
+print("your result is:",b)
