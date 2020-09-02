@@ -1,0 +1,13 @@
+#program for compound interest in python
+prin=float(input("enter the principal??"))
+rate=float(input("enter the rate??"))
+time=int(input("enter the time??"))
+t=1
+amount=0
+rate=(1+rate/100)
+for i in range(time):
+    t*=rate
+amount=prin*t
+print("the amount is :",amount)
+ci=amount-prin
+print("the compound interest is :",ci)
