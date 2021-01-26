@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+class Scratch {
+    public static void main(String[] args) {
+      ArrayList<String> programming_lang=new ArrayList<>();
+      //add elements
+        programming_lang.add("Python");
+        programming_lang.add("Go");
+        programming_lang.add("C++");
+        System.out.println("Arraylist :"+ programming_lang);
+    }
+}
