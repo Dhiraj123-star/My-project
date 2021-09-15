@@ -1,0 +1,37 @@
+{
+
+"python":{
+    "rank":1
+},
+"Java":{
+    "rank":2
+},
+"Go":{
+    "rank":3
+},
+"Scala":{
+    "rank":4
+},
+"R":{
+    "rank":5
+},
+"Elixir":{
+    "rank":6
+},
+"Lua":
+{
+    "rank":7
+},
+"JavaScript":{
+    "rank":8
+},
+"C#":
+{
+    "rank":9
+},
+"Sql":
+{
+    "rank":10
+}
+
+}
