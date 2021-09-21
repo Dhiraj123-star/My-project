@@ -1,26 +1,26 @@
-var MongoClient= require('mongodb').MongoClient;
+//escaping multiple placeholders , the array contains multiple values 
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var mysql=require("mysql")
+
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
+
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
+
+    var address = "Gurgaon"; //provided by the user
+    var name="Dhiraj"; //provided by the user
+    
+    //here we put placeholder for both name and address because both values are provided by user
 
 
-MongoClient.connect(url, 
-    function(err, db){
+    var sql= "select * from nodetable where name = ? or address=?";
 
 
-        if(err) throw err;
+conn.query(sql,[name,address] ,function(err,result){
+    if(err) throw err;
 
-        var dbo=db.db("node")
+    console.log(result);
 
-        var mysort = {name :1}
-
-//sorting by name 
-
-        dbo.collection("customers").find().sort(mysort).toArray(function(err,result){
-
-            if(err) throw err
-
-            console.log(result);
-
-            db.close()
-        })
-    })
+})
+})

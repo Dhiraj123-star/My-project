@@ -1,23 +1,14 @@
-var MongoClient= require('mongodb').MongoClient;
+//select statement
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var mysql=require("mysql")
 
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
 
-MongoClient.connect(url, function(err, db){
-
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
+conn.query("Select * from nodetable",function(err, result,fields){
     if(err) throw err;
-
-    var dbo = db.db("node");
-
-    
-
-    dbo.collection("customers").find({}).toArray(function(err, result){ //change into the array
-
-        if(err) throw err;
-
-
-        console.log(result);
-
-        db.close();
-    })
+console.log(result);
+})
 })

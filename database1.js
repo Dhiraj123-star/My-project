@@ -1,9 +1,12 @@
-var mongoClient= require('mongodb').MongoClient;
+var mysql=require("mysql")
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword"})
 
-mongoClient.connect(url,function(err,db){
-    if(err) throw err;
-    console.log("Database Created :)")
-    db.close()
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)")
+    conn.query("create database node",function(err,result){
+        if(err) throw err;
+        console.log("Database created")
+    })
 })

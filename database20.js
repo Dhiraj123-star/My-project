@@ -1,25 +1,22 @@
-var MongoClient= require('mongodb').MongoClient;
+//delete operation
+var mysql= require('mysql');
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var con= mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    password:"rootpassword",
+    database:"node"
+})
+console.log("Database connected successfully :)");
+con.connect(function(err){
+    if(err) throw err;
 
-MongoClient.connect(url,
-    function(err,db){
+    var sql = "delete from nodetable where id>7"; //delete the records where id is greater than 7
 
+    con.query(sql, 
+    function(err, result){
         if(err) throw err
-
-        var dbo= db.db("node")
-
-        var myquery = {address:/^B/}  //delete as many document where address is Bhiwadi
-
-        
-
-        dbo.collection("customers").deleteMany(myquery,
-            function(err,obj){
-                if(err ) throw err
-
-                console.log( obj.result.n, " document(s) deleted ")
-
-                db.close()
-            })
-
-    })
+        console.log("No. of records deleted", result.affectedRows); //4 records deleted
+        console.log(result);
+})
+})

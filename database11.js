@@ -1,26 +1,23 @@
-var MongoClient= require('mongodb').MongoClient;
+//escape character
+var mysql=require("mysql")
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
+
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
+
+    var address = "Bhiwani"; //provided by the user
+    
+    //returns all records from address Bhiwani
+
+    var sql= "select * from nodetable where address =" + mysql.escape(address);
 
 
-MongoClient.connect(url, function(err, db){
-
+conn.query(sql, function(err,result){
     if(err) throw err;
 
-    var dbo = db.db("node");
+    console.log(result);
 
-    var query = {"address":"Gurgaon"};
-
-    //only returns where address  is Gurgaon in the documents
-
-
-    dbo.collection("customers").find(query).toArray(function(err, result){ 
-
-        if(err) throw err;
-
-
-        console.log(result);
-
-        db.close();
-    })
+})
 })

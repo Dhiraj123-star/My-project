@@ -1,15 +1,15 @@
-var mongoClient= require('mongodb').MongoClient;
+//create table 
+var mysql=require("mysql")
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
 
-mongoClient.connect(url,function(err,db){
-    if(err) throw err;
-    var dbo = db.db("node")
-    var myobj={name:"Dhiraj","address":"Bhiwadi"};
-    dbo.collection("customers").insertOne(myobj,function(err,res){
-        if(err) throw err;
-        console.log("\n 1 document inserted :)")
-        db.close() //closing the resources
-    })
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
 
-})
+var sql = "Create table nodetable (name varchar(255), address varchar(255))";
+conn.query(sql,function(err,result){
+    if(err ) throw err;
+    console.log("table created :)");
+});
+});

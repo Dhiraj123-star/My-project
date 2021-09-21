@@ -1,25 +1,20 @@
-var MongoClient= require('mongodb').MongoClient;
+//order by desc
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var mysql= require('mysql');
 
-MongoClient.connect(url,
-    function(err,db){
+var con= mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    password:"rootpassword",
+    database:"node"
+})
+console.log("Database connected successfully :)");
+con.connect(function(err){
+    if(err) throw err;
 
+    con.query("select * from nodetable order by id desc" , //order by id  in descending order
+    function(err, result){
         if(err) throw err
-
-        var dbo= db.db("node")
-
-        var myquery = {"address": "Noida"}
-
-        var newValue = {$set:{name:"Manjeet", address:"Lucknow"}}
-
-        dbo.collection("customers").updateOne(myquery,newValue,
-            function(err,res){
-                if(err ) throw err
-
-                console.log("1 document updated")
-
-                db.close()
-            })
-
-    })
+        console.log(result);
+})
+})

@@ -1,24 +1,19 @@
-var MongoClient= require('mongodb').MongoClient;
+// select all records where the address starts with the letter 'R'
+//where clause 
+var mysql=require("mysql")
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
 
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
 
-MongoClient.connect(url, function(err, db){
+    //select all records where address starts with 'R' 
 
+conn.query("select * from nodetable where address like 'R%'", function(err,result){
     if(err) throw err;
 
-    var dbo = db.db("node");
+    console.log(result);
 
-    //only returns address  of the documents
-
-
-    dbo.collection("customers").find({},{projection:{_id:0,address:1}}).toArray(function(err, result){ 
-
-        if(err) throw err;
-
-
-        console.log(result);
-
-        db.close();
-    })
+})
 })

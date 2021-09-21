@@ -1,24 +1,18 @@
-var MongoClient= require('mongodb').MongoClient;
+//where clause 
+var mysql=require("mysql")
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
 
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
 
-MongoClient.connect(url, function(err, db){
+    //select all records where address is Bhiwadi
 
+conn.query("select * from nodetable where address='Bhiwadi'", function(err,result){
     if(err) throw err;
 
-    var dbo = db.db("node");
+    console.log(result);
 
-    //only returns name  of the documents
-
-
-    dbo.collection("customers").find({},{projection:{_id:0,name:1}}).toArray(function(err, result){ 
-
-        if(err) throw err;
-
-
-        console.log(result);
-
-        db.close();
-    })
+})
 })

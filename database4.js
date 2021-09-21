@@ -1,29 +1,15 @@
-var MongoClient= require('mongodb').MongoClient;
+//insert value into the table 
+var mysql=require("mysql")
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
 
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
 
-MongoClient.connect(url, function(err,db){
-    if(err) throw err;
-
-    var dbo= db.db("node");
-
-    var myobj=[
-
-        {"name":"Pratham","address":"Bhiwadi"},
-        {"name":"Prakash","address":"Gurgaon"},
-        {"name":"Puja","address":"Noida"},
-        {"name":"Gajendra","address":"Jaipur"},
-        {"name":"Dhara","address":"Bhiwadi"},
-        {"name":"Sumit","address":"New Delhi"},
-        {"name":"Anup","address":"Gurgaon"},
-
-    ]
-    dbo.collection("customers").insertMany(myobj,function (err, res){
-        if(err) throw err;
-
-        console.log("Number of records inserted "+res.insertedCount);
-
-        db.close();
-    })
-})
+var sql = "insert into  nodetable values('Dhiraj', 'Bhiwadi',1)"; //insert single record into the table
+conn.query(sql,function(err,result){ 
+    if(err ) throw err;
+    console.log("one record inserted  :)");
+});
+});

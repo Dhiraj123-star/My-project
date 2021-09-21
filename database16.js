@@ -1,27 +1,22 @@
-var MongoClient= require('mongodb').MongoClient;
+//update table
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var mysql= require('mysql');
 
-MongoClient.connect(url,
-    function(err,db){
+var con= mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    password:"rootpassword",
+    database:"node"
+})
+console.log("Database connected successfully :)");
+con.connect(function(err){
+    if(err) throw err;
 
+    var sql = "update nodetable set address= 'Bhiwadi' where id=11"; //update the address where id is 11
+
+    con.query(sql, 
+    function(err, result){
         if(err) throw err
-
-        var dbo= db.db("node")
-
-        var myquery = {address:/^R/}  //update all documents where address starts with R
-
-        var newValue = {$set:{ address:"Alwar"}}
-
-        //update as many records where address starts with R
-
-        dbo.collection("customers").updateMany(myquery,newValue,
-            function(err,res){
-                if(err ) throw err
-
-                console.log(res.result.nModified, "document(s) updated ")
-
-                db.close()
-            })
-
-    })
+        console.log(result.affectedRows +"record(s) updated ");
+})
+})

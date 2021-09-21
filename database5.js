@@ -1,30 +1,32 @@
-var MongoClient= require('mongodb').MongoClient;
-
-var url = "mongodb://localhost:27017/node" //node is new database
+//inserting multiple records 
 
 
-MongoClient.connect(url, function(err, db){
+var mysql=require("mysql")
 
-    if(err) throw err;
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
 
-    var dbo = db.db("node");
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
 
-    var myobj =[
+var sql = "insert into nodetable (name,address) values ?"; //adding placeholder for multiple records 
 
-        {"_id":1,"name":"Sachin","address":"Rewari"},
+var values=[
+    ['Pratham','Bhiwadi'],
+    ['Prakash','Gurgaon'],
+    ['Rohit','Bhiwani'],
+    ['Yasweer','Rewari'],
+    ['Gajendra','Rewari'],
+    ['Lokesh','Bhiwadi'],
+    ['Ramesh','Gurgaon'],
+    ['Ram','Bhiwani'],
+    ['Ashish','Bhiwadi'],
 
-        {"_id":2,"name":"Sachi","address":"Noida"},
 
-        {"_id":3,"name":"Tanmay","address":"New Delhi"},
-        
-    ];
+]
 
-    dbo.collection("customers").insertMany(myobj,function(err, res){
-
-        if(err) throw err;
-
-        console.log(res);
-
-        db.close();
-    })
-})
+conn.query(sql,[values],function(err,result){
+    if(err ) throw err;
+    console.log("No. of records inserted : ", result.affectedRows); //returns 9
+});
+});

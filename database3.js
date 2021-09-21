@@ -1,22 +1,18 @@
-var MongoClient= require('mongodb').MongoClient;
+//add primary key into the existing table
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var mysql=require("mysql")
 
-MongoClient.connect(url,
-    function (err, db){
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
 
-        if(err) throw err;
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
 
-        var dbo =db.db("node");
+var sql = "alter table nodetable add column id int auto_increment primary key"; //alter the table
 
-        var myobj= {"name":"Yasweer","address":"Rewari"};
+conn.query(sql,function(err,result){
+    if(err ) throw err;
+    console.log("table altered  :)");
+});
+});
 
-        dbo.collection("customers").insertOne(myobj, function(err,res)
-        {
-            if(err) throw err;
-
-            console.log("1 document inserted ")
-
-            db.close();
-        })
-    })

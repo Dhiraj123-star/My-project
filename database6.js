@@ -1,24 +1,14 @@
-var MongoClient= require('mongodb').MongoClient;
+//retriewing ids
+var mysql=require("mysql")
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
 
-
-MongoClient.connect(url, function(err, db){
-
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
+var sql= "insert into nodetable (name,address) values('Roshan', 'Rewari')";
+conn.query(sql, function(err,result){
     if(err) throw err;
-
-    var dbo = db.db("node");
-
-    //find the first records from the documents
-
-    dbo.collection("customers").findOne({},function(err, result){
-
-        if(err) throw err;
-
-        console.log(result.name);  //returns the name of the record
-
-        console.log(result);
-
-        db.close();
-    })
+    console.log("1 record inserted ID is: ",result.insertId); //returns the id of inserted record
+})
 })

@@ -1,24 +1,32 @@
-var MongoClient= require('mongodb').MongoClient;
+//select particular columns
+var  mysql=require("mysql")
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var conn= mysql.createConnection({host:"localhost",user:"root",password:"rootpassword",database:"node"})
 
+conn.connect(function(err){
+    if(err ) throw err;
+    console.log("connected :)");
 
-MongoClient.connect(url, function(err, db){
+    //only returns only id, name from  the table
 
-    if(err) throw err;
-
-    var dbo = db.db("node");
-
-    //only returns name and address of the documents
-
-
-    dbo.collection("customers").find({},{projection:{_id:0,name:1,address:1}}).toArray(function(err, result){ 
-
+    conn.query("select id ,name from nodetable",function(err,result,fields){
         if(err) throw err;
+        console.log(result);//returns whole records
 
+        console.log("The name of the third record is :");
 
-        console.log(result);
+        console.log(result[2].name); //returns name of the third record
 
-        db.close();
+        console.log("The details of the fields :");
+
+        console.log(fields) ; //prints the details of fields
+
+        //returns the name of second field
+
+        console.log("The name of the second field is: ");
+        console.log(fields[1].name); //returns name 
+
+        console.log("Thanks for using Node.js :)");
+
     })
-})
+});

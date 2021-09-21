@@ -1,25 +1,22 @@
-var MongoClient= require('mongodb').MongoClient;
+//start from position 3 , and next 5 records
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var mysql= require('mysql');
 
-MongoClient.connect(url,
-    function(err,db){
+var con= mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    password:"rootpassword",
+    database:"node"
+})
+console.log("Database connected successfully :)");
+con.connect(function(err){
+    if(err) throw err;
 
+    var sql = "select * from nodetable limit 2,5"; //start the position 3 and return next 5 records
+
+    con.query(sql, 
+    function(err, result){
         if(err) throw err
-
-        var dbo= db.db("node")
-
-        var myquery = {address:"Bhiwadi"}  //delete only document where address is Bhiwadi
-
-        
-
-        dbo.collection("customers").deleteOne(myquery,
-            function(err,obj){
-                if(err ) throw err
-
-                console.log( "1 document deleted ")
-
-                db.close()
-            })
-
-    })
+        console.log(result);
+})
+})

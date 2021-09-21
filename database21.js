@@ -1,29 +1,22 @@
-var MongoClient= require('mongodb').MongoClient;
+//drop  table
+//limit the records
+var mysql= require('mysql');
 
-var url = "mongodb://localhost:27017/node" //node is new database
+var con= mysql.createConnection({
+    host:"localhost",
+    user:"root",
+    password:"rootpassword",
+    database:"node"
+})
+console.log("Database connected successfully :)");
+con.connect(function(err){
+    if(err) throw err;
 
-MongoClient.connect(url,
-    function(err,db){
+    var sql = "drop table nodetable"; //drop nodetable
 
+    con.query(sql, 
+    function(err, result){
         if(err) throw err
-
-        var dbo= db.db("node")
-
-        //drop collection customers
-        
-
-        dbo.dropCollection("customers", function(err,delOk)
-        
-        {
-
-            if(err) throw err
-
-            if(delOk)
-
-            console.log("Collection deleted :)")
-
-        })
-                db.close()
-            })
-
-    
+        console.log("Table deleted successfully :)");
+})
+})
