@@ -1,0 +1,25 @@
+# adding title ,label and style
+
+# importing the required libraries
+
+import matplotlib.pyplot  as plt
+
+x=[5,7,15,7,2,17,2,9,4,21,12,9,6] # x-axis points
+
+y=[99,86,87,88,100,86,65,87,94,71,77,85,86] # y-axis points
+
+# plot the chart
+
+plt.scatter(x,y,c='yellow',linewidths=2,
+marker="^",edgecolors='red',s=60)
+
+# adding title and label of axis
+
+plt.title('Scatter plot by Dhiraj')
+
+plt.xlabel('Grades Range')
+plt.ylabel('Grades Scored')
+
+# to show the plot
+
+plt.show()
