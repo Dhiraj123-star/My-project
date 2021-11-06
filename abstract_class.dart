@@ -1,30 +1,30 @@
-//abstrct class in dart
-abstract class Person{
-  //declaring abstract method
-  void display();
+abstract class Person{ //abstract class
 
+  void displaydata(); //abstract method
 }
-class boy extends Person{
-  //overriding method
-  void display(){
-    print("I'm a boy :)");
 
+class Boy extends Person{
+  //overriding method
+
+  void displaydata(){
+    print("My name is Dhiraj");
   }
 }
-class girl extends Person{
-  //overriding method
-  void display(){
-    print("i'm a girl :)");
+
+class Girl extends Person{
+  void displaydata(){
+    print("My name is Komal");
   }
 }
 main(List<String> args) {
-  
-  girl g=new girl(); //creating object of girl
-  g.display(); //invoking method of girl class
 
-  boy b=new boy(); //creating object of boy
+  Boy b=new Boy(); //creating object of boy
 
-  b.display(); //invoking method of boy class 
+  Girl g = new Girl();
 
+  //calling method
 
+  b.displaydata();
+
+  g.displaydata();
 }

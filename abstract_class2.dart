@@ -1,42 +1,43 @@
-//another example of dart abstract class
-const pi=3.14 ; //declaring the value of pi 
-
-abstract class FindArea{
-  void displayArea(); //abstract method
+abstract class area{
+  void displayArea();
 }
-class Rectangle extends FindArea{
-  late int l; //late marks show it'll be initialise later 
-  late int  b;
-
-  void get_value(int l, int  b){
-    this.l=l;
-    this.b=b;
-
-  }
+class Rectangle extends area{
+  int a =13;
+  int b=4;
   void displayArea(){
-    print("The area of the rectangle is: ${this.l * this.b}");
-
+    print("The area of the rectangle is: ${(a*b)}");
   }
 }
-class circle extends FindArea{
-  late int radius; //late marks show it'll be initialise later 
- void getmyside(int radius){
-   this.radius=radius;
 
- } 
- void displayArea(){
-   print("The area of the circle is: ${pi*this.radius*this.radius}");
+class Square extends area{
+  int side=9;
 
- }
+  void displayArea(){
+    print("The area of the square is: ${(side*side)}");
+  }
+}
 
+class Triangle extends area{
+
+  int base =90;
+  int height =8;
+
+  void displayArea(){
+    print("The area of the triangle is: ${(0.5*base*height)}");
+  }
 }
 main(List<String> args) {
-  Rectangle r1=new Rectangle(); //creating the object of class Rectangle
-  r1.get_value(23, 3);
-  r1.displayArea();
-  //creating the object of class circle
-  circle c1=new circle();
-  c1.getmyside(10);
-  c1.displayArea();
+  Rectangle obj =new Rectangle();
 
+  Square obj1= new Square();
+
+  Triangle obj2 = new Triangle();
+
+  //calling the method
+
+  obj.displayArea();
+
+  obj1.displayArea();
+
+  obj2.displayArea();
 }
