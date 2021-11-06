@@ -1,32 +1,13 @@
-# password generator with python tkinter
+# password generator using Python
 
-from tkinter import *
+import random,string
 
-import random
+password_length = int(input("Enter the length of the password: "))
+password_characters=string.ascii_letters+string.digits+string.punctuation
 
-import string
+password=[]
 
-def gen():
-    password=[]
-    for i in range(2):
-        lower= random.choice(string.ascii_lowercase)
-        upper= random.choice(string.ascii_uppercase)
-        numbers= random.choice(string.digits)
-        password.append(lower)
-        password.append(upper)
-        password.append(numbers)
-        pass_=" ".join(str(x) for x in password)
-        label.config(text=pass_)
+for x in range(password_length):
+    password.append(random.choice(password_characters))
 
-
-root=Tk()
-label= Label(root,font=('arial',40,'bold'))
-label.pack()
-button1= Button(root,text="Generate",font=('arial',40,'bold'),command=gen).place(x=100,y=200)
-
-root.geometry("500x500")
-
-root.title("password")
-
-root.mainloop()
-
+print(" ".join(password)) # print the password 
